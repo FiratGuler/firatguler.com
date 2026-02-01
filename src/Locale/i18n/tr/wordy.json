@@ -1,0 +1,35 @@
+{
+    "wordyLogoText": {
+        "title": "Wordy",
+        "subtitle": "Kelime öğrenmeyi eğlenceli hale getiren uygulama."
+    },
+    "wordyHero": {
+        "title": "Hazır kartlarla kelimelere hükmedin",
+        "highlight": "Eğlenceli ve kolay öğrenme",
+        "subtitle": "Daha zeki öğrenin, daha hızlı hatırlayın ve günlük ilerlemenizi takip edin.",
+        "appstoreButton": "Şuradan indirin:"
+    },
+    "wordyFeatures": {
+        "mainTitle": "Günlük Öğrenme Artık Çok Kolay",
+        "mainDesc": "Kişiselleştirilmiş hedefler ve hatırlatıcılarla eğlenceli, etkili kelime kartları.",
+        "designedBy": "Tasarım:",
+        "privacyPolicy": "Gizlilik Politikası",
+        "items": {
+            "education": {
+                "title": "Eğitim",
+                "desc": "Ana Kategori"
+            },
+            "age": {
+                "title": "4+ Yaş",
+                "desc": "Yaş Sınırı"
+            },
+            "languages": {
+                "title": "6 Dil",
+                "desc": "Küresel öğrenme desteği."
+            }
+        }
+    },
+    "social": {
+        "follow": "Takip Et"
+    }
+}

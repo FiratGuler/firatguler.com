@@ -1,0 +1,29 @@
+{
+  "featuredApps": {
+    "title": "My Apps",
+    "subtitle": "Personal marks and solutions I've crafted in the iOS world.",
+    "getButton": "App Store",
+    "detailButton": "Detail",
+    "apps": {
+      "wordy": {
+        "title": "Wordy",
+        "subtitle": "Learn new words every day",
+        "desc": "Master new words every day with ready-to-use flashcard sets and smart reminders for fun, lasting, and effortless learning."
+      },
+      "boardy": {
+        "title": "Boardy",
+        "subtitle": "Track your levels during games",
+        "desc": "Transform your board game leveling into a digital meeple experience with classic card tracking and interactive map modes."
+      }
+    }
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "categories": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "architecture": "Architecture",
+      "backendTools": "Backend & Tools"
+    }
+  }
+}

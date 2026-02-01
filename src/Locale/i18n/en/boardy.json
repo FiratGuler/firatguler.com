@@ -1,0 +1,35 @@
+{
+    "boardyLogoText": {
+        "title": "Boardy",
+        "subtitle": "Track your levels during games"
+    },
+    "boardyHero": {
+        "title": "Track your levels in every game",
+        "highlight": "The ultimate game companion",
+        "subtitle": "No more pen and paper. Track levels with card or map modes, choose your meeple, and save your victories.",
+        "appstoreButton": "Download on the"
+    },
+    "boardyFeatures": {
+        "mainTitle": "Level Up Your Board Game Experience",
+        "mainDesc": "From card games to complex board games, Boardy helps you keep score and track progress without an internet connection.",
+        "designedBy": "Design By",
+        "privacyPolicy": "Privacy & Policy",
+        "items": {
+            "education": {
+                "title": "Games",
+                "desc": "Primary Category"
+            },
+            "age": {
+                "title": "4+ Ages",
+                "desc": "Age Rating"
+            },
+            "languages": {
+                "title": "2 Languages",
+                "desc": "Supporting global learners."
+            }
+        }
+    },
+    "social": {
+        "follow": "Follow"
+    }
+}

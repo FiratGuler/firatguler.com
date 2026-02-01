@@ -1,0 +1,29 @@
+{
+  "featuredApps": {
+    "title": "Uygulamalarım",
+    "subtitle": "iOS dünyasına bıraktığım kişisel izler ve çözümler.",
+    "getButton": "App Store",
+    "detailButton": "Detay",
+    "apps": {
+      "wordy": {
+        "title": "Wordy",
+        "subtitle": "Her gün yeni kelimeleri eğlenerek ve kalıcı olarak öğren",
+        "desc": "Hazır kart setleri ve akıllı hatırlatıcılarla yeni kelimeleri her gün eğlenerek ve kalıcı olarak ustalıkla öğrenin."
+      },
+      "boardy": {
+        "title": "Boardy",
+        "subtitle": "Oyun boyunca seviyeni dijital piyonunla takip et",
+        "desc": "Kart ve interaktif harita modlarıyla masa oyunlarında seviye takibini dijital bir piyon deneyimine dönüştürün."
+      }
+    }
+  },
+  "techStack": {
+    "title": "Teknolojiler",
+    "categories": {
+      "languages": "Diller",
+      "frameworks": "Frameworkler",
+      "architecture": "Mimari",
+      "backendTools": "Backend ve Araçlar"
+    }
+  }
+}

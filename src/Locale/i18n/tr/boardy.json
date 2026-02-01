@@ -1,0 +1,35 @@
+{
+    "boardyLogoText": {
+        "title": "Boardy",
+        "subtitle": "Oyun sırasında seviyeni takip et"
+    },
+    "boardyHero": {
+        "title": "Tüm oyunlarda seviyeni takip et",
+        "highlight": "En iyi oyun eşlikçin",
+        "subtitle": "Kağıt kalemi bırakın. Kart veya harita modlarıyla seviyenizi izleyin, piyonunuzu seçin ve galibiyetlerinizi kaydedin.",
+        "appstoreButton": "Şuradan İndir"
+    },
+    "boardyFeatures": {
+        "mainTitle": "Masa Oyunu Deneyimini Katla",
+        "mainDesc": "Kart oyunlarından karmaşık masa oyunlarına kadar Boardy, internet bağlantısı gerekmeden skor tutmanıza ve ilerlemenizi izlemenize yardımcı olur.",
+        "designedBy": "Tasarım",
+        "privacyPolicy": "Gizlilik Politikası",
+        "items": {
+            "education": {
+                "title": "Oyunlar",
+                "desc": "Ana Kategori"
+            },
+            "age": {
+                "title": "4+ Yaş",
+                "desc": "Yaş Sınırı"
+            },
+            "languages": {
+                "title": "2 Dil Desteği",
+                "desc": "Global kullanıcılar için."
+            }
+        }
+    },
+    "social": {
+        "follow": "Takip Et"
+    }
+}

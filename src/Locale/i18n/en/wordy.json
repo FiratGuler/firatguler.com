@@ -1,0 +1,35 @@
+{
+    "wordyLogoText": {
+        "title": "Wordy",
+        "subtitle": "An app that makes learning words fun."
+    },
+    "wordyHero": {
+        "title": "Master words with ready flashcards",
+        "highlight": "Fun & easy learning",
+        "subtitle": "Learn smarter, remember faster, and track your progress daily.",
+        "appstoreButton": "Download on the"
+    },
+    "wordyFeatures": {
+        "mainTitle": "Daily Learning Made Easy",
+        "mainDesc": "Fun, effective flashcards with personalised goals and reminders.",
+        "designedBy": "Design By",
+        "privacyPolicy": "Privacy & Policy",
+        "items": {
+            "education": {
+                "title": "Education",
+                "desc": "Primary Category"
+            },
+            "age": {
+                "title": "4+ Ages",
+                "desc": "Age Rating"
+            },
+            "languages": {
+                "title": "6 Languages",
+                "desc": "Supporting global learners."
+            }
+        }
+    },
+    "social": {
+        "follow": "Follow"
+    }
+}
