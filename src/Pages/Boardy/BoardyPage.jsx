@@ -56,7 +56,7 @@ export default function BoardyPage() {
           <BoardyLogoText t={t} />
         </section>
 
-        {/* Resimli KISIM */}
+        {/* Resimli KISIM     */}
         <BoardyBodyContent t={t} />
 
         {/* Özellikler Kartları */}
