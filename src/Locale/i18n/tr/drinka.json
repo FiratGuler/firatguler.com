@@ -1,0 +1,37 @@
+{
+  "drinkaLogoText": {
+    "title": "Drinka",
+    "subtitle": "Her Geceyi Hatırla"
+  },
+  "drinkaHero": {
+    "title": "Her yudumu,",
+    "highlight": "her geceyi hatırla.",
+    "subtitle": "Tadımlarını kaydet, içkilerini puanla, haritaya işaretle ve gerçekten dönmek isteyeceğin bir günlük oluştur.",
+    "appstoreButton": "Yakında",
+    "comingSoon": "Çok Yakında"
+  },
+  "drinkaFeatures": {
+    "mainTitle": "Gecelerin, güzelce hatırlansın",
+    "mainDesc": "Viskiden şaraba, kokteylden rakıya — Drinka ne içtiğini, nerede olduğunu ve kiminle paylaştığını kaydetmeni sağlar.",
+    "designedBy": "Tasarım",
+    "privacyPolicy": "Gizlilik Politikası",
+    "items": {
+      "journal": {
+        "title": "Tadım Günlüğü",
+        "desc": "Notlar, puanlar ve fotoğraflar"
+      },
+      "map": {
+        "title": "İçki Haritası",
+        "desc": "Her konumu işaretle"
+      },
+      "types": {
+        "title": "8+ İçki Türü",
+        "desc": "Viski, şarap, bira ve daha fazlası"
+      },
+      "social": {
+        "title": "Paylaşılan Anlar",
+        "desc": "Arkadaşlarını etiketle"
+      }
+    }
+  }
+}

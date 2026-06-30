@@ -1,0 +1,37 @@
+{
+  "drinkaLogoText": {
+    "title": "Drinka",
+    "subtitle": "Remember Every Night"
+  },
+  "drinkaHero": {
+    "title": "Remember every sip,",
+    "highlight": "every night.",
+    "subtitle": "Log tastings, rate your drinks, pin them on the map, and build a journal you'll actually want to revisit.",
+    "appstoreButton": "Coming soon on",
+    "comingSoon": "Coming Soon"
+  },
+  "drinkaFeatures": {
+    "mainTitle": "Your nights, beautifully remembered",
+    "mainDesc": "From whisky to wine, cocktails to rakı — Drinka helps you capture what you drank, where you were, and who you shared it with.",
+    "designedBy": "Design By",
+    "privacyPolicy": "Privacy & Policy",
+    "items": {
+      "journal": {
+        "title": "Tasting Journal",
+        "desc": "Notes, ratings & photos"
+      },
+      "map": {
+        "title": "Drink Map",
+        "desc": "Pin every location"
+      },
+      "types": {
+        "title": "8+ Drink Types",
+        "desc": "Whisky, wine, beer & more"
+      },
+      "social": {
+        "title": "Shared Moments",
+        "desc": "Tag friends on tastings"
+      }
+    }
+  }
+}

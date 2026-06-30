@@ -12,7 +12,7 @@ export default function AppCard({
   buttonDetail,
 }) {
   return (
-    <div className="min-w-[290px] max-w-[280px] sm:min-w-[280px] sm:max-w-[280px] md:min-w-[360px] md:max-w-[360px] lg:min-w-[400px] lg:max-w-[400px] bg-white/5 rounded-[2rem] p-6 border border-white/5 flex flex-col h-full flex-shrink-0">
+    <div className="min-w-[290px] max-w-[280px] sm:min-w-[280px] sm:max-w-[280px] md:min-w-[360px] md:max-w-[360px] lg:min-w-[400px] lg:max-w-[400px] bg-white/5 rounded-[2rem] p-6 border border-white/5 flex flex-col self-stretch flex-shrink-0">
       {/* Image + Title */}
       <div className="flex items-center gap-5 mb-4">
         <div
@@ -43,7 +43,7 @@ export default function AppCard({
       </div>
 
       {/* Buttons */}
-      <div className="flex gap-1">
+      <div className="flex gap-1 mt-auto">
         {appStoreLink && (
           <a
             href={appStoreLink}

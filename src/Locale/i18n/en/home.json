@@ -14,6 +14,11 @@
         "title": "Boardy",
         "subtitle": "Track your levels during games",
         "desc": "Transform your board game leveling into a digital meeple experience with classic card tracking and interactive map modes."
+      },
+      "drinka": {
+        "title": "Drinka",
+        "subtitle": "Remember Every Night",
+        "desc": "Log every tasting, pin it on the map, and build a beautiful journal of the nights worth remembering."
       }
     }
   },

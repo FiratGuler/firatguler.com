@@ -1,8 +1,15 @@
 
 import wordyImage from "../Pages/Wordy/Assets/wordy_logo.png"; 
 import boardyImage from "../Pages/Boardy/Assets/boardy_logo.png";
+import drinkaImage from "../Pages/Drinka/Assets/drinka_logo.png";
 
 const apps = [
+  {
+    id: "drinka",
+    image: drinkaImage,
+    detailLink: "/drinka",
+    tags: ["Swift", "SwiftUI", "Firebase", "MapKit", "MVVM"]
+  },
   {
     id: "wordy",
     image: wordyImage,
