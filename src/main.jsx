@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App/App'
 import { LanguageProvider } from './Locale/Context/LanguageContext'
-import './index.css'
+import './Core/DesignSystem/global.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

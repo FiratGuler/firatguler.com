@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { MdArrowOutward, MdCheckCircle, MdContentPaste, MdGraphicEq } from "react-icons/md";
+import { FaApple } from "react-icons/fa";
 
 export default function AppCard({
   title,
@@ -7,61 +10,88 @@ export default function AppCard({
   image,
   appStoreLink,
   detailLink,
+  platform = "iOS",
   tags,
+  accent,
+  index,
   buttonGet,
   buttonDetail,
 }) {
+  const platformClass = platform.toLowerCase();
+
   return (
-    <div className="min-w-[290px] max-w-[280px] sm:min-w-[280px] sm:max-w-[280px] md:min-w-[360px] md:max-w-[360px] lg:min-w-[400px] lg:max-w-[400px] bg-white/5 rounded-[2rem] p-6 border border-white/5 flex flex-col self-stretch flex-shrink-0">
-      {/* Image + Title */}
-      <div className="flex items-center gap-5 mb-4">
-        <div
-          className="w-20 h-20 shrink-0 rounded-[1.5rem] bg-cover bg-center border border-white/10 shadow-lg"
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
-        <div>
-          <h4 className="font-black text-2xl leading-none mb-1">{title}</h4>
-          <p className="text-[10px] text-primary font-bold tracking-widest">
-            {subtitle}
-          </p>
+    <article className={`app-card app-card--${platformClass}`} style={{ "--app-accent": accent }}>
+      <div className="app-card__wash" aria-hidden="true" />
+      <Link
+        to={detailLink}
+        className="app-card__detail-hitbox"
+        aria-label={`${title} ${buttonDetail}`}
+      />
+
+      <div className="app-card__topline">
+        <span>PROJECT / {String(index).padStart(2, "0")}</span>
+        <span className="app-card__platform"><FaApple aria-hidden="true" /> {platform} APP</span>
+      </div>
+
+      <div className="app-card__identity">
+        {image ? (
+          <img className="app-card__icon" src={image} alt="" />
+        ) : (
+          <div className="app-card__icon app-card__icon--placeholder" aria-hidden="true">{title.charAt(0)}</div>
+        )}
+        <div className="min-w-0">
+          <h3>{title}</h3>
+          <p className="app-card__tagline">{subtitle}</p>
         </div>
       </div>
 
-      {/* Subtitle */}
-      <p className="text-white/60 text-sm mb-4 flex-1">{desc}</p>
+      <p className="app-card__description">{desc}</p>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {tags?.map((tag) => (
-          <span
-            key={tag}
-            className="text-[10px] text-white/60 border border-white/20 rounded-full px-2 py-0.5"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="app-card__tags" aria-label="Technology stack">
+        {tags?.map((tag) => <span key={tag}>{tag}</span>)}
       </div>
 
-      {/* Buttons */}
-      <div className="flex gap-1 mt-auto">
+      {platform === "macOS" && (
+        <div className="app-card__desktop-preview" aria-hidden="true">
+          <div className="app-card__desktop-bar">
+            <span><FaApple /> Maclet</span>
+            <i />
+            <span>⌘ M</span>
+          </div>
+          <div className="app-card__desktop-panel">
+            <div className="app-card__desktop-heading"><b>Menu Bar Utilities</b><small>ACTIVE</small></div>
+            <div className="app-card__desktop-now"><MdGraphicEq /><span><strong>Now Playing</strong><small>Focus soundtrack · 72%</small></span><i><b /></i></div>
+            <div className="app-card__desktop-tools">
+              <span><MdCheckCircle /><small>Daily Tasks</small><b>3 left</b></span>
+              <span><MdContentPaste /><small>Clipboard</small><b>Ready</b></span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="app-card__actions">
         {appStoreLink && (
           <a
             href={appStoreLink}
-            className="bg-[#FEE715] text-[#121212] font-black rounded-full px-5 py-1.5 text-[11px] tracking-widest transition-all hover:scale-105 active:scale-95 uppercase flex-1 text-center"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="app-card__button app-card__button--ghost"
           >
+            <FaApple className="app-card__apple" aria-hidden="true" />
             {buttonGet}
+            <MdArrowOutward aria-hidden="true" />
           </a>
         )}
         {detailLink && (
-          <a
-            href={detailLink}
-            target="_blank"
-            className="border border-[#FEE715]/30 text-[#FEE715] font-bold rounded-full px-5 py-1.5 text-[11px] tracking-widest transition-all hover:bg-[#FEE715]/10 active:scale-95 uppercase flex-1 text-center"
+          <Link
+            to={detailLink}
+            className="app-card__button app-card__button--primary"
           >
             {buttonDetail}
-          </a>
+            <MdArrowOutward aria-hidden="true" />
+          </Link>
         )}
       </div>
-    </div>
+    </article>
   );
 }

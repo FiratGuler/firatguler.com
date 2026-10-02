@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import LanguageSwitcher from "../Home/Components/LanguageSwitcher";
-import DeveloperBackButton from "../Home/Components/DeveloperBackButton";
+import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
+import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 
 import BoardyLogoText from "./Components/BoardyLogoText";
 import BoardyBodyContent from "./Components/BoardyBodyContent";
@@ -25,22 +25,8 @@ export default function BoardyPage() {
     return value || key;
   };
 
-  useEffect(() => {
-    const prevTitle = document.title;
-    const favicon = document.querySelector("link[rel~='icon']");
-    const prevIcon = favicon ? favicon.href : "";
-
-    document.title = "Boardy - Level Tracker";
-    if (favicon) favicon.href = "boardy_logo.ico";
-
-    return () => {
-      document.title = prevTitle;
-      if (favicon) favicon.href = prevIcon;
-    };
-  }, []);
-
   return (
-    <div className="bg-boardy-bg text-boardy-text font-boardy min-h-screen pb-20 selection:bg-boardy-accent selection:text-white">
+    <div className="product-page bg-boardy-bg text-boardy-text font-boardy min-h-screen pb-20 selection:bg-boardy-accent selection:text-white">
       {/* Üst Navigasyon & Dil Seçici */}
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center gap-3">
         <DeveloperBackButton bgColor="#9E1838" textColor="#FFFDF5" />

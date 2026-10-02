@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import WordyLogoText from "./Components/WordyLogoText";
 import WordyBodyContent from "./Components/WordyBodyContent";
 import WordyFeatures from "./Components/WordyFeatures";
-import LanguageSwitcher from "../Home/Components/LanguageSwitcher";
-import DeveloperBackButton from "../Home/Components/DeveloperBackButton";
+import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
+import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import SocialSection from "./Components/WordySocial";
 import en from "../../Locale/i18n/en/wordy.json";
 import tr from "../../Locale/i18n/tr/wordy.json";
@@ -23,22 +23,8 @@ export default function WordyPage() {
     return value || key;
   };
 
-  useEffect(() => {
-    const prevTitle = document.title;
-    const favicon = document.querySelector("link[rel~='icon']");
-    const prevIcon = favicon ? favicon.href : "";
-
-    document.title = "Wordy - Flashcards";
-    if (favicon) favicon.href = "wordy_logo.ico";
-
-    return () => {
-      document.title = prevTitle;
-      if (favicon) favicon.href = prevIcon;
-    };
-  }, []);
-
   return (
-    <div className="bg-wordy-bg text-wordy-text font-wordy min-h-screen pb-20 selection:bg-wordy-accent selection:text-white">
+    <div className="product-page bg-wordy-bg text-wordy-text font-wordy min-h-screen pb-20 selection:bg-wordy-accent selection:text-white">
       {/* Üst Navigasyon & Dil Seçici */}
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center gap-3">
         <DeveloperBackButton bgColor="#000000" textColor="#FFFFFF" />

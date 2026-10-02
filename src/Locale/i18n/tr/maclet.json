@@ -1,0 +1,46 @@
+{
+  "brand": { "tagline": "Tek bar. Tüm akışın." },
+  "hero": {
+    "eyebrow": "Native bir macOS menü bar utility'si",
+    "title": "Küçük araçlar.",
+    "highlight": "Tam ihtiyaç duyduğun yerde.",
+    "description": "Maclet; müzik, uygulama sesleri, günlük görevler, timer ve clipboard geçmişini işinden kopmadan kullanabileceğin hafif, tek bir yerde birleştirir.",
+    "status": "macOS için geliştiriliyor",
+    "previewLabel": "Maclet menü bar utility önizlemesi",
+    "nowPlaying": "Şimdi Çalıyor",
+    "track": "Odak müziğin",
+    "artist": "Music üzerinden çalıyor",
+    "tasks": "3 görev kaldı",
+    "timer": "24:18 odaklanma",
+    "clipboard": "Clipboard hazır"
+  },
+  "features": {
+    "eyebrow": "Menü barına yerleşik",
+    "title": "Beş araç. Tek native ritim.",
+    "description": "Her modül compact, odaklı ve bağımsız olarak yapılandırılabilir kalır.",
+    "items": {
+      "playing": { "title": "Now Playing", "description": "Pencere değiştirmeden mevcut parçayı gör; Spotify, Apple Music veya Chrome'u kontrol et." },
+      "mixer": { "title": "Audio Mixer", "description": "Output seç ve desteklenen uygulamaların sesini compact bir mixer üzerinden yönet." },
+      "tasks": { "title": "Daily Tasks", "description": "Önceliklerini kaydet, tag ekle ve tamamlanmayan işleri sonraki güne taşı." },
+      "timer": { "title": "Timer", "description": "Odak seanslarını başlat, duraklat ve local aktivite geçmişiyle sakla." },
+      "clipboard": { "title": "Clipboard History", "description": "Son metinleri ara, tag'lerle düzenle ve global shortcut ile yeniden kullan." }
+    }
+  },
+  "native": {
+    "eyebrow": "Native tasarım",
+    "title": "Private, local ve tamamen Mac'e ait.",
+    "description": "Maclet native Apple framework'lerini kullanır ve utility verilerini local olarak saklar. Mevcut implementation'da account, remote backend veya üçüncü parti package bulunmaz.",
+    "points": {
+      "local": "Clipboard, görev ve timer verileri Mac'te kalır",
+      "native": "SwiftUI, AppKit, Core Audio ve system material'lar",
+      "modular": "Menü bar modülleri açılıp kapatılabilir ve sıralanabilir",
+      "fast": "Tek tıkla erişim için tasarlanan compact action'lar"
+    }
+  },
+  "cta": {
+    "eyebrow": "Şekillenmeye devam ediyor",
+    "title": "Daha az pencere değişimi. Daha fazla akış.",
+    "description": "Maclet; utility'leri ve yayın süreci geliştirilirken aktif development aşamasında."
+  },
+  "footer": { "credit": "Tasarlayan ve geliştiren" }
+}

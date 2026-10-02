@@ -2,42 +2,90 @@ import React from "react";
 import profilePic from "../../Assets/profilePhoto.png";
 import SocialButton from "../SocialButton";
 import "../../../../Utils/global.css";
-// React Icons import
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdMail } from "react-icons/md";
+import { MdArrowOutward, MdMail } from "react-icons/md";
 
-export default function HomeHeaderCard() {
+const marqueeItems = [
+  "SWIFT",
+  "SWIFTUI",
+  "PRODUCT",
+  "FIREBASE",
+  "DESIGN SYSTEMS",
+  "SWIFT",
+  "SWIFTUI",
+  "PRODUCT",
+  "FIREBASE",
+  "DESIGN SYSTEMS",
+];
+
+export default function HomeHeaderCard({ t }) {
   return (
-    <section className="relative w-full max-w-full overflow-hidden rounded-[2.5rem] p-6 md:p-14 flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-12 glass-border 
-      bg-gradient-to-br from-primary/20 via-tile-dark to-tile-dark">
-      
-      {/* Profil Resmi */}
-<div className="absolute top-4 right-4 w-32 h-32 md:w-64 md:h-64 lg:static lg:order-2 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
-  <img
-    src={profilePic}
-    alt="Profile"
-    className="w-full h-full object-contain scale-110"
-  />
-</div>
+    <section className="hero-card reveal reveal--two" id="intro">
+      <div className="hero-card__glow" aria-hidden="true" />
+      <div className="hero-card__content">
+        <div className="hero-copy">
+          <div className="hero-kicker">
+            <span className="status-dot" aria-hidden="true" />
+            {t("hero.availability")}
+          </div>
 
+          <h1 className="hero-title" aria-label="Fırat Güler">
+            <span>Fırat</span>
+            <span>
+              Güler<span className="hero-title__dot">.</span>
+            </span>
+          </h1>
 
-      {/* Text alanı - min-w-0 BURADA KRİTİK */}
-      <div className="flex-1 lg:order-1 mt-32 lg:mt-0 min-w-0 w-full">
-        <span className="text-primary font-bold text-s tracking-[0.3em] uppercase mb-4 block">
-          iOS Developer
-        </span>
-        
-        <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-6 leading-[0.85] break-words">
-            Fırat Güler
-        </h1>
+          <div className="hero-intro-row">
+            <p className="hero-intro">{t("hero.intro")}</p>
+            <MdArrowOutward className="hero-intro-row__arrow" aria-hidden="true" />
+          </div>
 
-        {/* Butonlar - Kaydırma Alanı */}
-        <div className="w-full overflow-x-auto pb-4 scrollbar-hidden">
-          <div className="flex gap-3 whitespace-nowrap">
+          <div className="hero-socials scrollbar-hidden">
             <SocialButton icon={FaGithub} text="GitHub" href="https://github.com/FiratGuler" />
             <SocialButton icon={FaLinkedin} text="LinkedIn" href="https://www.linkedin.com/in/firatgulerr/" />
             <SocialButton icon={MdMail} text="Mail" href="mailto:firattgulerrr@gmail.com" />
           </div>
+        </div>
+
+        <div className="portrait-composition" aria-label={t("hero.portraitLabel")}>
+          <div className="portrait-composition__backdrop" aria-hidden="true" />
+          <div className="portrait-composition__label" aria-hidden="true">
+            <span>PORTRAIT</span>
+            <span>01 / 01</span>
+          </div>
+
+          <div className="portrait-composition__media">
+            <img src={profilePic} alt={t("hero.portraitAlt")} />
+            <div className="portrait-composition__shine" aria-hidden="true" />
+          </div>
+
+          <div className="portrait-composition__rail" aria-hidden="true">
+            <span>SWIFT</span>
+            <i />
+            <span>SWIFTUI</span>
+            <i />
+            <span>IOS</span>
+          </div>
+
+          <div className="portrait-composition__card">
+            <span className="portrait-composition__location">
+              <i aria-hidden="true" />
+              {t("hero.location")}
+            </span>
+            <strong>{t("hero.portraitNote")}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div className="hero-marquee" aria-hidden="true">
+        <div className="hero-marquee__track">
+          {marqueeItems.map((item, index) => (
+            <React.Fragment key={`${item}-${index}`}>
+              <span>{item}</span>
+              <i>✦</i>
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>

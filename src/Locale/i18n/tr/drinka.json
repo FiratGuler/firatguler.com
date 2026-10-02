@@ -1,37 +1,133 @@
 {
-  "drinkaLogoText": {
-    "title": "Drinka",
-    "subtitle": "Her Geceyi Hatırla"
+  "brand": {
+    "tagline": "Her Geceyi Hatırla"
   },
-  "drinkaHero": {
-    "title": "Her yudumu,",
-    "highlight": "her geceyi hatırla.",
-    "subtitle": "Tadımlarını kaydet, içkilerini puanla, haritaya işaretle ve gerçekten dönmek isteyeceğin bir günlük oluştur.",
-    "appstoreButton": "Yakında",
-    "comingSoon": "Çok Yakında"
+  "hero": {
+    "eyebrow": "Kişisel tadım ve anı günlüğü",
+    "title": "Her yudumun",
+    "highlight": "bir hikâyesi var.",
+    "description": "Ne içtiğini, gecenin nerede geçtiğini ve o anı kimlerle paylaştığını kaydet. Drinka, tadımlarını tekrar dönmek isteyeceğin kişisel bir arşive dönüştürür.",
+    "appStoreEyebrow": "Şuradan indirin",
+    "version": "Şimdi App Store'da · iPhone",
+    "imageAlt": "Tadım anılarını gösteren Drinka haritası",
+    "stats": {
+      "types": "içki türü",
+      "languages": "dil",
+      "memories": "anı"
+    },
+    "floating": {
+      "map": "Anı haritası",
+      "journal": "Tadım günlüğü"
+    },
+    "memoryCard": {
+      "eyebrow": "Bu gecenin anısı",
+      "title": "Hatırlamaya değer bir kadeh",
+      "detail": "Kadıköy · arkadaşlarla"
+    }
   },
-  "drinkaFeatures": {
-    "mainTitle": "Gecelerin, güzelce hatırlansın",
-    "mainDesc": "Viskiden şaraba, kokteylden rakıya — Drinka ne içtiğini, nerede olduğunu ve kiminle paylaştığını kaydetmeni sağlar.",
-    "designedBy": "Tasarım",
-    "privacyPolicy": "Gizlilik Politikası",
-    "items": {
-      "journal": {
-        "title": "Tadım Günlüğü",
-        "desc": "Notlar, puanlar ve fotoğraflar"
+  "experience": {
+    "eyebrow": "Deneyim",
+    "title": "Bir yudumdan bir anıya.",
+    "description": "Anın önüne geçmeden, bir tadı özel yapan bütün ayrıntıları saklayan odaklı bir kayıt akışı.",
+    "typesLabel": "Desteklenen içki türleri",
+    "steps": {
+      "capture": {
+        "title": "Tadımı kaydet",
+        "description": "Puan, not, ruh hali, yemek eşleşmesi, tekrar alma tercihi ve şişe ya da anı fotoğrafları ekle."
       },
-      "map": {
-        "title": "İçki Haritası",
-        "desc": "Her konumu işaretle"
+      "place": {
+        "title": "Mekânı işaretle",
+        "description": "Tadımı harita konumu, kayıtlı yer veya mekânla eşleştir ve tarihiyle birlikte sakla."
       },
-      "types": {
-        "title": "8+ İçki Türü",
-        "desc": "Viski, şarap, bira ve daha fazlası"
+      "people": {
+        "title": "İnsanları hatırla",
+        "description": "Masayı paylaştığın kişileri ekle ve birlikte oluşturduğun anıları yeniden keşfet."
       },
-      "social": {
-        "title": "Paylaşılan Anlar",
-        "desc": "Arkadaşlarını etiketle"
+      "revisit": {
+        "title": "Hikâyeye geri dön",
+        "description": "Koleksiyonunu gez, Spotlight ile ara ve gecelerini harita üzerinden yeniden keşfet."
       }
     }
+  },
+  "capabilities": {
+    "eyebrow": "Drinka'daki her şey",
+    "title": "Bir tadım kaydından fazlası.",
+    "description": "Drinka içkilerini, mekânlarını, insanlarını ve tercihlerini düşünülmüş tek bir kişisel arşivde birleştirir.",
+    "items": {
+      "collection": {
+        "title": "Kişisel Koleksiyon",
+        "description": "Kaydettiğin bütün tadımları bir arada tut ve keşfettiğin içkileri filtrele."
+      },
+      "tryList": {
+        "title": "Deneme Listesi",
+        "description": "Şişeleri ve içkileri sonrası için kaydet, dilediğinde düzenle ve liste sayısını widget'tan takip et."
+      },
+      "venues": {
+        "title": "Mekânlar ve Ziyaretler",
+        "description": "Mekânları kaydet, geçmiş ziyaretlerine dön ve mekân bilgisi hazır şekilde yeni bir tadım başlat."
+      },
+      "map": {
+        "title": "Harita ve Kayıtlı Yerler",
+        "description": "Tadımları, mekânları ve kişisel yerleri birlikte gör veya haritayı konum seçici olarak kullan."
+      },
+      "contacts": {
+        "title": "Paylaşılan Anlar",
+        "description": "Kişisel bir arkadaş listesi oluştur; insanları tadımlar, mekânlar ve anılarla ilişkilendir."
+      },
+      "cocktails": {
+        "title": "Kokteyl Kataloğu",
+        "description": "Kendi kayıtlarının yanında kokteyl tariflerini ve içeriklerini ayrı bir katalogda keşfet."
+      },
+      "profile": {
+        "title": "Lezzet Profili ve İçgörüler",
+        "description": "Tat, ruh hali ve bağlama göre tercihlerini oluştur; aktivitelerinden kişisel içgörüler gör."
+      },
+      "reminders": {
+        "title": "Akıllı Hatırlatıcılar",
+        "description": "Deneme Listesi, mekân ziyareti, haftalık özet ve tadım yıl dönümü bildirimlerini isteğine göre al."
+      },
+      "widgets": {
+        "title": "Ana Ekran Widget'ları",
+        "description": "Uygulamayı açmadan hızlı kayıt başlat veya Deneme Listesi sayını görünür tut."
+      },
+      "search": {
+        "title": "Spotlight ve Deep Link",
+        "description": "Tadımları ve mekânları Spotlight'tan bulup doğrudan doğru ekrana geç."
+      },
+      "sharing": {
+        "title": "İçe ve Dışa Paylaşım",
+        "description": "Görsel tadım kartları oluştur veya başka bir uygulamadaki görseli doğrudan yeni kayda gönder."
+      },
+      "languages": {
+        "title": "10 Dil",
+        "description": "Drinka'yı Türkçe, İngilizce, Almanca, İspanyolca, Fransızca, İtalyanca, Japonca, Korece veya Çince kullan."
+      }
+    }
+  },
+  "platform": {
+    "eyebrow": "Günlük kullanım için geliştirildi",
+    "title": "Arşivin, gece başladığında yanında.",
+    "items": {
+      "cloud": "Cloud tabanlı tadım ve görsel saklama",
+      "account": "Anonim, Apple, Google veya e-posta hesabı",
+      "privacy": "Hesap silme kontrollerine sahip kişisel arşiv",
+      "sync": "Widget, Spotlight, bildirim ve paylaşım entegrasyonları"
+    }
+  },
+  "cta": {
+    "eyebrow": "Sıradaki tadıma hazır mısın?",
+    "title": "Geceyi hatırlamaya değer kıl.",
+    "description": "Drinka'yı indir; her şişeye, mekâna ve paylaşılan ana kendine ait bir hikâye ver."
+  },
+  "social": {
+    "eyebrow": "Geceyi paylaş",
+    "title": "İyi bir hikâye yeni bir kadehi hak eder.",
+    "description": "Her tadımı bir anıya dönüştürecek birini tanıyor musun? Drinka'yı onunla paylaş.",
+    "action": "Şurada paylaş",
+    "shareText": "Drinka, her tadımı saklamaya değer bir anıya dönüştürüyor."
+  },
+  "footer": {
+    "credit": "Tasarlayan ve geliştiren",
+    "privacy": "Gizlilik Politikası"
   }
 }

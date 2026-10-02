@@ -1,10 +1,42 @@
 {
+  "navigation": {
+    "location": "Istanbul, TR",
+    "role": "iOS Developer",
+    "contentLabel": "Page sections",
+    "sections": {
+      "intro": "Intro",
+      "work": "Selected Work",
+      "process": "Process",
+      "stack": "Tech Stack"
+    }
+  },
+  "hero": {
+    "availability": "Available for selected opportunities",
+    "intro": "I build thoughtful Apple-platform products where engineering, interaction and visual craft meet.",
+    "portraitLabel": "Fırat Güler portrait and core skills",
+    "portraitAlt": "Portrait of Fırat Güler",
+    "location": "Based in Istanbul",
+    "portraitNote": "Native products with a sharp visual point of view."
+  },
   "featuredApps": {
+    "eyebrow": "Selected work",
     "title": "My Apps",
-    "subtitle": "Personal marks and solutions I've crafted in the iOS world.",
+    "subtitle": "Selected native products I've designed and built across Apple platforms.",
+    "scrollLeft": "Show previous applications",
+    "scrollRight": "Show next applications",
     "getButton": "App Store",
     "detailButton": "Detail",
     "apps": {
+      "maclet": {
+        "title": "Maclet",
+        "subtitle": "Your essential Mac controls, one click away",
+        "desc": "Control music and app audio, manage daily tasks, run a timer and search clipboard history — directly from the macOS menu bar."
+      },
+      "glimpsie": {
+        "title": "Glimpsie",
+        "subtitle": "A gentle journal for every kind of day",
+        "desc": "Capture your mood, emotions, dreams, notes, movement, music and the small details that made the day yours."
+      },
       "wordy": {
         "title": "Wordy",
         "subtitle": "Learn new words every day",
@@ -22,13 +54,43 @@
       }
     }
   },
+  "process": {
+    "eyebrow": "From idea to App Store",
+    "title": "I build the whole product, not just the screen.",
+    "description": "I design, build and ship native Apple-platform products — from early product thinking and interface design to architecture, integrations and store delivery.",
+    "learningLabel": "Currently exploring",
+    "steps": {
+      "product": {
+        "title": "Figma",
+        "description": "Shape the product flow, feature scope and interface."
+      },
+      "design": {
+        "title": "Design System",
+        "description": "Turn Figma decisions into coherent, reusable UI."
+      },
+      "build": {
+        "title": "SwiftUI",
+        "description": "Build maintainable Swift and SwiftUI architecture."
+      },
+      "ship": {
+        "title": "App Store",
+        "description": "Test, distribute and ship through Apple's ecosystem."
+      }
+    }
+  },
   "techStack": {
+    "eyebrow": "Toolkit",
     "title": "Tech Stack",
+    "summary": "A practical toolkit shaped around native products, maintainable architecture and expressive interfaces.",
     "categories": {
       "languages": "Languages",
-      "frameworks": "Frameworks",
+      "applePlatform": "Apple Platform",
       "architecture": "Architecture",
-      "backendTools": "Backend & Tools"
+      "backend": "Backend",
+      "delivery": "Product & Delivery"
     }
+  },
+  "footer": {
+    "note": "Designed & built with intent in Istanbul."
   }
 }

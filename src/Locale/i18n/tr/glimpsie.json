@@ -1,0 +1,35 @@
+{
+  "brand": { "tagline": "Her türlü gün için bir günlük" },
+  "hero": {
+    "eyebrow": "Ruh hali, anılar ve aradaki küçük anlar",
+    "title": "Günü fark et.",
+    "highlight": "Bir izini sakla.",
+    "description": "Ruh halini, duygularını, rüyalarını, notlarını, hareketini, insanlarını ve müziğini sakin bir günlük kaydında birleştir; günlerinin bir hikâyeye dönüşmesini izle.",
+    "status": "iPhone için geliştiriliyor",
+    "previewLabel": "Glimpsie günlük kaydı önizlemesi"
+  },
+  "preview": { "month": "Eylül", "question": "Bugün nasıl hissettirdi?", "glance": "Güne bakış", "summary": "Biraz ışıltılı, sakin bir gün." },
+  "modules": {
+    "eyebrow": "Senin günün, senin biçimin", "title": "Tek kayıt. Her yönün.", "description": "Yalnızca sana faydalı gelen bölümleri tut ve günlük ritmine uyan sırada düzenle.",
+    "items": {
+      "mood": { "title": "Ruh Hali", "description": "Güne yön veren hissi seç." },
+      "emotions": { "title": "Duygular", "description": "Altındaki daha incelikli hisleri kaydet." },
+      "doodle": { "title": "Çizim", "description": "Kelimelerin tutamadığı kısmı çiz." },
+      "dream": { "title": "Rüya", "description": "Bir rüyayı ve çevresindeki hikâyeyi hatırla." },
+      "note": { "title": "Not", "description": "Saklamak istediğin küçük detayı yaz." },
+      "movement": { "title": "Hareket", "description": "Egzersizi ve günlük aktiviteyi kaydet." },
+      "people": { "title": "İnsanlar", "description": "Günü kimlerle paylaştığını hatırla." },
+      "music": { "title": "Müzik", "description": "Bugünün nasıl hissettirdiğini anlatan parçayı ekle." }
+    }
+  },
+  "world": {
+    "eyebrow": "Kaydın ötesinde", "title": "Seninle büyüyen bir günlük.", "description": "Takvim, temalar, içgörüler ve widget'lar küçük günlük kontrolleri kişisel bir ritme dönüştürür.",
+    "calendar": { "title": "Takvim ve Güne Bakış", "description": "Kayıtlı günler arasında dolaş ve her kaydı kısa bir görsel özet olarak gör." },
+    "streak": { "title": "Yumuşak Seriler", "description": "Düşünmeyi baskıya dönüştürmeden mevcut ve en uzun serilerini gör." },
+    "themes": { "title": "Mood Temaları", "description": "Sana ait hissettiren bir duygu dili için Classic, Cosmos, Garden, Arcade veya Ocean seç." },
+    "widgets": { "title": "Ana Ekran Widget'ları", "description": "Hızlı ekleme, seri, haftalık kayıtlar ve takvim Ana Ekran'da yakında dursun." }
+  },
+  "cta": { "eyebrow": "Hatırlamanın daha sakin bir yolu", "title": "Günlerin bulanıklaşmaktan fazlasını hak ediyor.", "description": "Glimpsie şu anda geliştirme aşamasında. Ürün şekillenmeye devam ederken landing page ve gizlilik bilgileri hazır." },
+  "social": { "eyebrow": "Bir iz paylaş", "title": "Bazı günler paylaşınca güzelleşir.", "description": "Günlerini daha sakin bir biçimde fark edip hatırlamak isteyecek biriyle Glimpsie'yi paylaş.", "action": "Şurada paylaş", "shareText": "Glimpsie, her türlü gün için sakin bir günlük." },
+  "footer": { "credit": "Fırat Güler tarafından geliştirildi", "privacy": "Gizlilik Politikası" }
+}

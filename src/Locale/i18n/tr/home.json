@@ -1,10 +1,42 @@
 {
+  "navigation": {
+    "location": "İstanbul, TR",
+    "role": "iOS Developer",
+    "contentLabel": "Sayfa bölümleri",
+    "sections": {
+      "intro": "Giriş",
+      "work": "Seçili İşler",
+      "process": "Süreç",
+      "stack": "Teknolojiler"
+    }
+  },
+  "hero": {
+    "availability": "Seçili fırsatlara açık",
+    "intro": "Mühendislik, etkileşim ve görsel tasarımın buluştuğu özenli Apple platform ürünleri geliştiriyorum.",
+    "portraitLabel": "Fırat Güler portresi ve ana yetkinlikleri",
+    "portraitAlt": "Fırat Güler portresi",
+    "location": "İstanbul'da yaşıyor",
+    "portraitNote": "Güçlü bir görsel bakışa sahip native ürünler."
+  },
   "featuredApps": {
+    "eyebrow": "Seçili işler",
     "title": "Uygulamalarım",
-    "subtitle": "iOS dünyasına bıraktığım kişisel izler ve çözümler.",
+    "subtitle": "Apple platformlarında tasarlayıp geliştirdiğim seçili native ürünler.",
+    "scrollLeft": "Önceki uygulamaları göster",
+    "scrollRight": "Sonraki uygulamaları göster",
     "getButton": "App Store",
     "detailButton": "Detay",
     "apps": {
+      "maclet": {
+        "title": "Maclet",
+        "subtitle": "Temel Mac kontrollerin tek tık uzağında",
+        "desc": "Müziği ve uygulama seslerini kontrol et; günlük görevlerini, timer'ı ve clipboard geçmişini doğrudan macOS menü barından yönet."
+      },
+      "glimpsie": {
+        "title": "Glimpsie",
+        "subtitle": "Her güne ait yumuşak bir günlük",
+        "desc": "Ruh halini, duygularını, rüyalarını, notlarını, hareketini, müziğini ve günü sana ait yapan küçük detayları kaydet."
+      },
       "wordy": {
         "title": "Wordy",
         "subtitle": "Her gün yeni kelimeleri eğlenerek ve kalıcı olarak öğren",
@@ -22,13 +54,43 @@
       }
     }
   },
+  "process": {
+    "eyebrow": "Fikirden App Store'a",
+    "title": "Yalnızca ekranı değil, ürünün tamamını geliştiriyorum.",
+    "description": "Native Apple platform ürünlerini; ilk ürün fikri ve arayüz tasarımından mimariye, entegrasyonlara ve store dağıtımına kadar tasarlıyor, geliştiriyor ve yayınlıyorum.",
+    "learningLabel": "Şu anda öğreniyorum",
+    "steps": {
+      "product": {
+        "title": "Figma",
+        "description": "Ürün akışını, özellik kapsamını ve arayüzü şekillendir."
+      },
+      "design": {
+        "title": "Design System",
+        "description": "Figma kararlarını tutarlı ve yeniden kullanılabilir arayüzlere dönüştür."
+      },
+      "build": {
+        "title": "SwiftUI",
+        "description": "Sürdürülebilir Swift ve SwiftUI mimarisi geliştir."
+      },
+      "ship": {
+        "title": "App Store",
+        "description": "Apple ekosisteminde test et, dağıt ve yayınla."
+      }
+    }
+  },
   "techStack": {
+    "eyebrow": "Araç seti",
     "title": "Teknolojiler",
+    "summary": "Native ürünler, sürdürülebilir mimari ve ifade gücü yüksek arayüzler etrafında şekillenen pratik bir araç seti.",
     "categories": {
       "languages": "Diller",
-      "frameworks": "Frameworkler",
+      "applePlatform": "Apple Platformu",
       "architecture": "Mimari",
-      "backendTools": "Backend ve Araçlar"
+      "backend": "Backend",
+      "delivery": "Ürün ve Dağıtım"
     }
+  },
+  "footer": {
+    "note": "İstanbul'da özenle tasarlandı ve geliştirildi."
   }
 }

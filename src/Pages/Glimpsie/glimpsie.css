@@ -1,0 +1,97 @@
+.glimpsie-page {
+  --g-primary: #b5ade1;
+  --g-coral: #f0b4ae;
+  --g-ink: #161927;
+  --g-surface: #2d303d;
+  --g-line: rgba(246, 245, 251, 0.1);
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 12% 5%, rgba(181, 173, 225, 0.16), transparent 30rem), linear-gradient(180deg, #1c1f2d, #11131e);
+  color: #f6f5fb;
+  font-family: "Epilogue", sans-serif;
+}
+
+.glimpsie-orb { position: absolute; width: 34rem; height: 34rem; border-radius: 50%; filter: blur(120px); opacity: .11; animation: glimpsie-drift 12s ease-in-out infinite alternate; }
+.glimpsie-orb--one { top: 20rem; right: -18rem; background: var(--g-coral); }
+.glimpsie-orb--two { top: 90rem; left: -20rem; background: var(--g-primary); animation-delay: -6s; }
+
+.glimpsie-nav, .glimpsie-main, .glimpsie-footer { position: relative; z-index: 1; width: min(1240px, calc(100% - 2rem)); margin-inline: auto; }
+.glimpsie-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 88px; }
+.glimpsie-nav .product-back-button { justify-self: start; width: max-content; }
+.glimpsie-nav .language-switcher { justify-self: end; }
+.glimpsie-nav > span { color: rgba(246,245,251,.35); font-size: .6rem; font-weight: 800; letter-spacing: .2em; }
+.glimpsie-main { display: flex; flex-direction: column; gap: 1.25rem; }
+.glimpsie-hero, .glimpsie-modules, .glimpsie-world, .glimpsie-cta { position: relative; overflow: hidden; border: 1px solid var(--g-line); border-radius: clamp(1.6rem, 4vw, 2.75rem); background: rgba(35,38,50,.82); box-shadow: 0 32px 90px rgba(0,0,0,.28); backdrop-filter: blur(24px); }
+
+.glimpsie-hero { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(2rem,7vw,7rem); min-height: 700px; padding: clamp(2rem,6vw,5rem); }
+.glimpsie-hero::after { position: absolute; inset: 0; content: ""; background-image: radial-gradient(rgba(246,245,251,.06) 1px, transparent 1px); background-size: 26px 26px; mask-image: linear-gradient(90deg, transparent 30%, black); pointer-events: none; }
+.glimpsie-hero__copy, .glimpsie-preview { position: relative; z-index: 1; }
+.glimpsie-brand { display: flex; align-items: center; gap: .8rem; margin-bottom: 5rem; }
+.glimpsie-brand > img { width: 58px; height: 58px; border: 1px solid rgba(246,245,251,.16); border-radius: 1.15rem; box-shadow: 0 16px 38px rgba(162,153,217,.28); object-fit: cover; }
+.glimpsie-brand > span { display: flex; flex-direction: column; font-size: 1rem; font-weight: 800; }
+.glimpsie-brand small { margin-top: .2rem; color: var(--g-coral); font-size: .55rem; letter-spacing: .1em; text-transform: uppercase; }
+.glimpsie-eyebrow { display: block; color: var(--g-primary); font-size: .64rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.glimpsie-hero h1 { max-width: 650px; margin: 1rem 0 1.5rem; font-size: clamp(4rem,8vw,7.2rem); font-weight: 750; letter-spacing: -.075em; line-height: .88; }
+.glimpsie-hero h1 em { display: block; color: var(--g-coral); font-weight: 600; }
+.glimpsie-hero__copy > p { max-width: 36rem; color: rgba(246,245,251,.55); font-size: 1.05rem; line-height: 1.7; }
+.glimpsie-status, .glimpsie-cta > div { display: inline-flex; align-items: center; gap: .6rem; margin-top: 2rem; padding: .75rem 1rem; border: 1px solid var(--g-line); border-radius: 999px; color: rgba(246,245,251,.55); font-size: .65rem; font-weight: 750; }
+.glimpsie-status > span, .glimpsie-cta > div > span { width: 7px; height: 7px; border-radius: 50%; background: var(--g-coral); box-shadow: 0 0 14px var(--g-coral); animation: glimpsie-pulse 2s ease-in-out infinite; }
+
+.glimpsie-preview { width: min(100%,420px); margin-inline: auto; padding: 1.35rem; border: 1px solid rgba(246,245,251,.13); border-radius: 2.2rem; background: linear-gradient(160deg,rgba(69,71,82,.95),rgba(22,25,39,.95)); box-shadow: 0 40px 80px rgba(0,0,0,.5); transform: rotate(2deg); transition: transform .5s ease; }
+.glimpsie-preview:hover { transform: rotate(0deg) translateY(-6px); }
+.glimpsie-preview__top { display: flex; justify-content: space-between; align-items: center; padding: .7rem; color: rgba(246,245,251,.65); font-size: .75rem; font-weight: 700; }
+.glimpsie-preview__top b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--g-primary); color: var(--g-ink); }
+.glimpsie-preview__calendar { display: grid; grid-template-columns: repeat(7,1fr); gap: .35rem; padding: 1rem 0; border-block: 1px solid var(--g-line); }
+.glimpsie-preview__calendar span { display: grid; place-items: center; aspect-ratio: 1; border-radius: 50%; color: rgba(246,245,251,.4); font-size: .65rem; }
+.glimpsie-preview__calendar .active { background: var(--g-coral); color: var(--g-ink); font-weight: 800; }
+.glimpsie-preview__question { padding: 2.2rem 0 1.2rem; text-align: center; font-size: 1.2rem; font-weight: 700; }
+.glimpsie-preview__moods { display: flex; justify-content: space-between; gap: .4rem; }
+.glimpsie-preview__moods i { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--g-line); border-radius: 1rem; background: rgba(255,255,255,.025); color: rgba(246,245,251,.45); font-style: normal; }
+.glimpsie-preview__moods .selected { border-color: var(--g-primary); background: rgba(181,173,225,.16); color: var(--g-primary); }
+.glimpsie-preview__glance { display: flex; flex-direction: column; gap: .45rem; margin-top: 1.4rem; padding: 1.2rem; border-radius: 1.25rem; background: linear-gradient(135deg,rgba(181,173,225,.12),rgba(240,180,174,.08)); }
+.glimpsie-preview__glance span { color: var(--g-primary); font-size: .55rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.glimpsie-preview__glance strong { font-size: .85rem; line-height: 1.45; }
+
+.glimpsie-modules, .glimpsie-world { padding: clamp(1.5rem,5vw,4rem); }
+.glimpsie-modules > header, .glimpsie-world > header { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; margin-bottom: 2.5rem; }
+.glimpsie-modules h2, .glimpsie-world h2 { max-width: 700px; margin-top: .7rem; font-size: clamp(2.5rem,5vw,4.7rem); font-weight: 720; letter-spacing: -.065em; line-height: .96; }
+.glimpsie-modules header > p, .glimpsie-world header > p { max-width: 400px; color: rgba(246,245,251,.48); font-size: .9rem; line-height: 1.65; }
+.glimpsie-module-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: .75rem; }
+.glimpsie-module-grid article, .glimpsie-world__grid article { position: relative; min-height: 250px; padding: 1.3rem; overflow: hidden; border: 1px solid var(--g-line); border-radius: 1.5rem; background: rgba(255,255,255,.025); transition: transform .28s ease,border-color .28s ease; }
+.glimpsie-module-grid article:hover, .glimpsie-world__grid article:hover { transform: translateY(-6px); border-color: rgba(181,173,225,.45); }
+.glimpsie-module-grid article > span { position: absolute; top: .65rem; right: 1rem; color: rgba(246,245,251,.06); font-size: 3.8rem; font-weight: 900; }
+.glimpsie-module-grid svg, .glimpsie-world__grid svg { width: 2.1rem; height: 2.1rem; color: var(--g-primary); }
+.glimpsie-module-grid h3 { margin-top: 4.2rem; font-size: 1.05rem; }
+.glimpsie-module-grid p, .glimpsie-world__grid p { margin-top: .7rem; color: rgba(246,245,251,.43); font-size: .76rem; line-height: 1.6; }
+
+.glimpsie-world > header { align-items: flex-start; }
+.glimpsie-world > header { flex-direction: column; gap: .8rem; }
+.glimpsie-world__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .75rem; }
+.glimpsie-world__grid article { min-height: 280px; background: linear-gradient(145deg,rgba(181,173,225,.06),rgba(240,180,174,.025)); }
+.glimpsie-world__grid h3 { margin-top: 5.2rem; font-size: 1.3rem; }
+.glimpsie-theme-dots { display: flex; gap: .5rem; margin-top: 1rem; }
+.glimpsie-theme-dots i { width: 20px; height: 20px; border-radius: 50%; background: var(--g-primary); }
+.glimpsie-theme-dots i:nth-child(2) { background:#7584c9; }.glimpsie-theme-dots i:nth-child(3) { background:#71a879; }.glimpsie-theme-dots i:nth-child(4) { background:#e2859c; }.glimpsie-theme-dots i:nth-child(5) { background:#55a9b4; }
+
+.glimpsie-cta { display: flex; flex-direction: column; align-items: center; padding: clamp(4rem,10vw,8rem) 1.5rem; text-align: center; background: radial-gradient(circle at 50% 100%,rgba(240,180,174,.2),transparent 45%),rgba(35,38,50,.82); }
+.glimpsie-cta h2 { max-width: 850px; margin-top: .8rem; font-size: clamp(3rem,7vw,6.3rem); font-weight: 720; letter-spacing: -.075em; line-height: .92; }
+.glimpsie-cta > p { max-width: 600px; margin-top: 1.25rem; color: rgba(246,245,251,.5); line-height: 1.65; }
+.glimpsie-footer { display: flex; justify-content: space-between; padding: 2rem .5rem 2.5rem; color: rgba(246,245,251,.3); font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.glimpsie-footer button { min-height: 44px; color: var(--g-primary); }
+
+.glimpsie-policy { min-height:100vh; padding-bottom:5rem; background:linear-gradient(180deg,#2d303d,#161927); color:#f6f5fb; font-family:"Epilogue",sans-serif; }
+.glimpsie-policy__container { width:min(900px,calc(100% - 2rem)); margin:auto; padding-top:2rem; }
+.glimpsie-policy__back { display:flex; align-items:center; gap:.5rem; min-height:44px; color:var(--g-primary); font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+.glimpsie-policy__header { display:flex; align-items:center; gap:1.2rem; margin:3rem 0; }
+.glimpsie-policy__header > div { display:grid; place-items:center; width:76px; height:76px; overflow:hidden; border:1px solid rgba(246,245,251,.14); border-radius:1.5rem; box-shadow:0 16px 38px rgba(0,0,0,.22); }
+.glimpsie-policy__header img { width:100%; height:100%; object-fit:cover; }.glimpsie-policy__header h1{font-size:clamp(2.7rem,7vw,4.5rem);letter-spacing:-.06em;}.glimpsie-policy__header p{margin-top:.4rem;color:rgba(246,245,251,.4);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;}
+.glimpsie-policy main { display:flex; flex-direction:column; gap:1rem; }.glimpsie-policy section{padding:clamp(1.4rem,4vw,2rem);border:1px solid var(--g-line);border-radius:1.7rem;background:rgba(255,255,255,.035);}.glimpsie-policy section h2{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;font-size:1.2rem;}.glimpsie-policy section h2 svg{color:var(--g-primary);}.glimpsie-policy section p{color:rgba(246,245,251,.57);font-size:.84rem;line-height:1.7;}.glimpsie-policy section ul{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:1rem 0;}.glimpsie-policy section li{padding:.75rem;border-radius:.8rem;background:#161927;color:rgba(246,245,251,.65);font-size:.72rem;}.glimpsie-policy__notice{border-color:rgba(181,173,225,.25)!important;background:rgba(181,173,225,.09)!important;color:rgba(246,245,251,.7);font-size:.85rem;line-height:1.7}.glimpsie-policy__pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.glimpsie-policy__contacts{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}.glimpsie-policy__contacts a{display:flex;align-items:center;gap:.7rem;padding:1rem;border:1px solid var(--g-line);border-radius:1rem;color:#f6f5fb;text-decoration:none}.glimpsie-policy__contacts svg{color:var(--g-primary);font-size:1.6rem}.glimpsie-policy__contacts span{display:flex;flex-direction:column;font-size:.76rem;font-weight:700}.glimpsie-policy__contacts small{margin-bottom:.3rem;color:rgba(246,245,251,.35);font-size:.52rem;text-transform:uppercase}.glimpsie-policy footer{padding:2.5rem;text-align:center;color:rgba(246,245,251,.28);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}
+
+@keyframes glimpsie-drift { to { transform:translate3d(8%,8%,0) scale(1.08); } }
+@keyframes glimpsie-pulse { 50% { opacity:.45; transform:scale(.75); } }
+
+@media(max-width:900px){.glimpsie-hero{grid-template-columns:1fr}.glimpsie-preview{margin-top:1rem}.glimpsie-module-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.glimpsie-nav{grid-template-columns:1fr auto}.glimpsie-nav>span{display:none}.glimpsie-hero{min-height:auto;padding:1.25rem}.glimpsie-brand{margin-bottom:3rem}.glimpsie-hero h1{font-size:clamp(3.7rem,17vw,5.2rem)}.glimpsie-modules>header{flex-direction:column;align-items:flex-start;gap:1rem}.glimpsie-module-grid,.glimpsie-world__grid{grid-template-columns:1fr}.glimpsie-module-grid article{min-height:220px}.glimpsie-footer{flex-direction:column;align-items:center;text-align:center}.glimpsie-policy section ul,.glimpsie-policy__pair,.glimpsie-policy__contacts{grid-template-columns:1fr}}
+
+@media(prefers-reduced-motion:reduce){.glimpsie-orb,.glimpsie-status>span,.glimpsie-cta>div>span{animation:none!important}}

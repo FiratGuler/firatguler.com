@@ -1,40 +1,55 @@
 import React from "react";
 import techData from "../../../Models/TechData";
 
+const tickerItems = [
+  "Swift",
+  "SwiftUI",
+  "UIKit",
+  "Firebase",
+  "Architecture",
+  "Product Design",
+  "Swift",
+  "SwiftUI",
+  "UIKit",
+  "Firebase",
+  "Architecture",
+  "Product Design",
+];
+
 export default function TechStack({ t }) {
   return (
-    <section className="bg-tile-dark rounded-[2.5rem] glass-border p-10 md:p-14">
-      {/* Başlık Bölümü */}
-      <div className="flex items-center gap-4 mb-12">
-        <h2 className="text-4xl font-black uppercase tracking-tight">
-          {t("techStack.title")}
-        </h2>
+    <section className="stack-section reveal" id="stack">
+      <div className="stack-ticker" aria-hidden="true">
+        <div className="stack-ticker__track">
+          {tickerItems.map((item, index) => (
+            <React.Fragment key={`${item}-${index}`}>
+              <span>{item}</span>
+              <i>•</i>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
 
-      {/* Grid Yapısı */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {techData.map((tech, index) => (
-          <div
-            key={index}
-            className="bg-white/5 rounded-3xl p-6 border border-white/5 hover:bg-white/[0.08] transition-all group"
-          >
-            <p className="text-primary text-[10px] font-black tracking-[0.2em] uppercase mb-6 opacity-70 group-hover:opacity-100 transition-opacity">
-              {t(`techStack.categories.${tech.category}`)}
-            </p>
-
-            <ul className="space-y-3">
-              {tech.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="flex items-center gap-3">
-                  {/* Küçük sarı nokta (indicator) */}
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors shadow-[0_0_8px_rgba(254,231,21,0.4)]"></span>
-                  <span className="font-bold text-white/90 group-hover:text-white transition-colors">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
+      <div className="stack-section__body">
+        <div className="section-heading section-heading--stack">
+          <div className="section-heading__copy">
+            <span className="section-index">02 / {t("techStack.eyebrow")}</span>
+            <h2 className="section-title">{t("techStack.title")}</h2>
           </div>
-        ))}
+          <p className="stack-section__summary">{t("techStack.summary")}</p>
+        </div>
+
+        <div className="stack-grid">
+          {techData.map((tech, index) => (
+            <article className="stack-card" key={tech.category}>
+              <div className="stack-card__index">0{index + 1}</div>
+              <h3>{t(`techStack.categories.${tech.category}`)}</h3>
+              <ul>
+                {tech.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,35 @@
+{
+  "brand": { "tagline": "A journal for every kind of day" },
+  "hero": {
+    "eyebrow": "Mood, memory and the moments between",
+    "title": "Notice the day.",
+    "highlight": "Keep a glimpse.",
+    "description": "Bring your mood, emotions, dreams, notes, movement, people and music into one calm daily entry — then watch your days become a story.",
+    "status": "In development for iPhone",
+    "previewLabel": "Glimpsie day entry preview"
+  },
+  "preview": { "month": "September", "question": "How did today feel?", "glance": "Day glance", "summary": "A calm day with a little spark." },
+  "modules": {
+    "eyebrow": "Your day, your way", "title": "One entry. Every side of you.", "description": "Keep only the sections that feel useful and arrange them in the order that fits your journaling rhythm.",
+    "items": {
+      "mood": { "title": "Mood", "description": "Choose the feeling that shaped the day." },
+      "emotions": { "title": "Emotions", "description": "Capture the more nuanced feelings underneath." },
+      "doodle": { "title": "Doodle", "description": "Draw the part of the day words cannot hold." },
+      "dream": { "title": "Dream", "description": "Remember a dream and the story around it." },
+      "note": { "title": "Note", "description": "Write the small detail you want to keep." },
+      "movement": { "title": "Movement", "description": "Log exercise and everyday activity." },
+      "people": { "title": "People", "description": "Remember who shared the day with you." },
+      "music": { "title": "Music", "description": "Attach the track that sounded like today." }
+    }
+  },
+  "world": {
+    "eyebrow": "Beyond the entry", "title": "A journal that grows with you.", "description": "Calendar, themes, insights and widgets turn small daily check-ins into a personal rhythm.",
+    "calendar": { "title": "Calendar & Day Glance", "description": "Move through saved days and see each entry as a compact visual summary." },
+    "streak": { "title": "Gentle Streaks", "description": "See current and longest streaks without turning reflection into pressure." },
+    "themes": { "title": "Mood Themes", "description": "Choose Classic, Cosmos, Garden, Arcade or Ocean for a mood language that feels yours." },
+    "widgets": { "title": "Home Screen Widgets", "description": "Quick add, streak, weekly entries and calendar views stay close on the Home Screen." }
+  },
+  "cta": { "eyebrow": "A quieter way to remember", "title": "Your days deserve more than a blur.", "description": "Glimpsie is currently in development. The landing page and privacy information are ready while the product continues to take shape." },
+  "social": { "eyebrow": "Share a glimpse", "title": "Some days are better shared.", "description": "Send Glimpsie to someone who would enjoy a gentler way to notice and remember their days.", "action": "Share on", "shareText": "Glimpsie is a gentle journal for every kind of day." },
+  "footer": { "credit": "Created by Fırat Güler", "privacy": "Privacy Policy" }
+}

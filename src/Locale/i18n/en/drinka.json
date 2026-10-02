@@ -1,37 +1,133 @@
 {
-  "drinkaLogoText": {
-    "title": "Drinka",
-    "subtitle": "Remember Every Night"
+  "brand": {
+    "tagline": "Remember Every Night"
   },
-  "drinkaHero": {
-    "title": "Remember every sip,",
-    "highlight": "every night.",
-    "subtitle": "Log tastings, rate your drinks, pin them on the map, and build a journal you'll actually want to revisit.",
-    "appstoreButton": "Coming soon on",
-    "comingSoon": "Coming Soon"
+  "hero": {
+    "eyebrow": "A personal tasting & memory journal",
+    "title": "Every sip has",
+    "highlight": "a story.",
+    "description": "Capture what you drank, where the night happened and who shared it with you. Drinka turns tastings into a personal archive worth revisiting.",
+    "appStoreEyebrow": "Download on the",
+    "version": "Available now · iPhone",
+    "imageAlt": "Drinka map showing tasting memories",
+    "stats": {
+      "types": "drink types",
+      "languages": "languages",
+      "memories": "memories"
+    },
+    "floating": {
+      "map": "Memory map",
+      "journal": "Tasting journal"
+    },
+    "memoryCard": {
+      "eyebrow": "Tonight's memory",
+      "title": "A glass worth remembering",
+      "detail": "Kadıköy · with friends"
+    }
   },
-  "drinkaFeatures": {
-    "mainTitle": "Your nights, beautifully remembered",
-    "mainDesc": "From whisky to wine, cocktails to rakı — Drinka helps you capture what you drank, where you were, and who you shared it with.",
-    "designedBy": "Design By",
-    "privacyPolicy": "Privacy & Policy",
-    "items": {
-      "journal": {
-        "title": "Tasting Journal",
-        "desc": "Notes, ratings & photos"
+  "experience": {
+    "eyebrow": "The experience",
+    "title": "From a sip to a memory.",
+    "description": "A focused flow that keeps the details of a tasting without getting in the way of the moment.",
+    "typesLabel": "Supported drink types",
+    "steps": {
+      "capture": {
+        "title": "Capture the tasting",
+        "description": "Add a rating, notes, mood, food pairing, buy-again choice and bottle or memory photos."
       },
-      "map": {
-        "title": "Drink Map",
-        "desc": "Pin every location"
+      "place": {
+        "title": "Pin the place",
+        "description": "Connect the tasting to a map location, saved place or venue and keep the date with it."
       },
-      "types": {
-        "title": "8+ Drink Types",
-        "desc": "Whisky, wine, beer & more"
+      "people": {
+        "title": "Remember the people",
+        "description": "Add the friends who shared the table and see the memories you created together."
       },
-      "social": {
-        "title": "Shared Moments",
-        "desc": "Tag friends on tastings"
+      "revisit": {
+        "title": "Return to the story",
+        "description": "Browse your collection, search with Spotlight and rediscover nights through the map."
       }
     }
+  },
+  "capabilities": {
+    "eyebrow": "Everything in Drinka",
+    "title": "More than a tasting log.",
+    "description": "Drinka connects your drinks, places, people and preferences into one thoughtful personal archive.",
+    "items": {
+      "collection": {
+        "title": "Personal Collection",
+        "description": "Keep every saved tasting together and filter the drinks you have explored."
+      },
+      "tryList": {
+        "title": "Try List",
+        "description": "Save bottles and drinks for later, edit them anytime and track the list from a widget."
+      },
+      "venues": {
+        "title": "Venues & Visits",
+        "description": "Save venues, revisit their history and begin a new tasting with the place already attached."
+      },
+      "map": {
+        "title": "Map & Saved Places",
+        "description": "See tastings, venues and personal places together or use the map as a location picker."
+      },
+      "contacts": {
+        "title": "Shared Moments",
+        "description": "Create a private people list and connect friends with tastings, venues and memories."
+      },
+      "cocktails": {
+        "title": "Cocktail Catalog",
+        "description": "Explore cocktail recipes and ingredients in a dedicated catalog alongside your own records."
+      },
+      "profile": {
+        "title": "Taste Profile & Insights",
+        "description": "Shape preferences around taste, mood and context, then see insights from your activity."
+      },
+      "reminders": {
+        "title": "Smart Reminders",
+        "description": "Get optional Try List, venue revisit, weekly summary and tasting anniversary reminders."
+      },
+      "widgets": {
+        "title": "Home Screen Widgets",
+        "description": "Start a quick add or keep your Try List count visible without opening the app."
+      },
+      "search": {
+        "title": "Spotlight & Deep Links",
+        "description": "Find tastings and venues from Spotlight and jump directly into the right screen."
+      },
+      "sharing": {
+        "title": "Share In & Out",
+        "description": "Create visual tasting cards or send an image from another app straight into a new record."
+      },
+      "languages": {
+        "title": "10 Languages",
+        "description": "Use Drinka in English, Turkish, German, Spanish, French, Italian, Japanese, Korean or Chinese."
+      }
+    }
+  },
+  "platform": {
+    "eyebrow": "Built for everyday use",
+    "title": "Your archive, available when the night begins.",
+    "items": {
+      "cloud": "Cloud-backed tasting and image storage",
+      "account": "Anonymous, Apple, Google or email account",
+      "privacy": "Private personal archive with account deletion controls",
+      "sync": "Widget, Spotlight, notification and share integrations"
+    }
+  },
+  "cta": {
+    "eyebrow": "Ready for the next tasting?",
+    "title": "Make the night memorable.",
+    "description": "Download Drinka and give every bottle, place and shared moment a story of its own."
+  },
+  "social": {
+    "eyebrow": "Share the night",
+    "title": "A good story deserves another round.",
+    "description": "Know someone who would turn every tasting into a memory? Send Drinka their way.",
+    "action": "Share on",
+    "shareText": "Drinka turns every tasting into a memory worth keeping."
+  },
+  "footer": {
+    "credit": "Designed & built by",
+    "privacy": "Privacy Policy"
   }
 }

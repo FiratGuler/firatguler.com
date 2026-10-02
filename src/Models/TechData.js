@@ -1,19 +1,23 @@
 const techData = [
   {
     category: "languages",
-    items: ["Swift", "Objective-C", "Javascript"]
+    items: ["Swift", "Objective-C", "JavaScript"]
   },
   {
-    category: "frameworks",
-    items: ["SwiftUI", "UIKit", "Combine", "iOS SDK", "WidgetKit"]
+    category: "applePlatform",
+    items: ["SwiftUI", "UIKit", "Combine", "WidgetKit", "App Intents", "Spotlight", "StoreKit", "MapKit"]
   },
   {
     category: "architecture",
-    items: ["MVC", "MVVM", "MVVM-C", "Clean Architecture"]
+    items: ["MVVM", "MVVM-C", "Router Navigation", "Feature-based", "Clean Architecture"]
   },
   {
-    category: "backendTools",
-    items: ["Firebase", "REST APIs", "Xcode", "Git", "Postman", "Figma"]
+    category: "backend",
+    items: ["Firebase", "Firestore", "REST APIs"]
+  },
+  {
+    category: "delivery",
+    items: ["Figma", "TestFlight", "App Store Connect", "Xcode Cloud", "Git"]
   }
 ];
 

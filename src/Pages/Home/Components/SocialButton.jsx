@@ -1,4 +1,5 @@
 import React from "react";
+import { MdNorthEast } from "react-icons/md";
 
 export default function SocialButton({ icon: Icon, text, href, className }) {
   return (
@@ -6,11 +7,11 @@ export default function SocialButton({ icon: Icon, text, href, className }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center shrink-0 gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-primary font-bold text-sm uppercase tracking-widest hover:bg-primary hover:text-background-dark transition-all ${className}`}
+      className={`social-link ${className || ""}`}
     >
-      <Icon className="text-xl" />
+      <Icon className="social-link__icon" aria-hidden="true" />
       <span>{text}</span>
+      <MdNorthEast className="social-link__arrow" aria-hidden="true" />
     </a>
   );
 }
-
