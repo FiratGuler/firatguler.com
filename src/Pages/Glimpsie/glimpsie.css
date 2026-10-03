@@ -6,7 +6,7 @@
   --g-line: rgba(246, 245, 251, 0.1);
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: clip;
   background: radial-gradient(circle at 12% 5%, rgba(181, 173, 225, 0.16), transparent 30rem), linear-gradient(180deg, #1c1f2d, #11131e);
   color: #f6f5fb;
   font-family: "Epilogue", sans-serif;
@@ -59,7 +59,9 @@
 .glimpsie-modules header > p, .glimpsie-world header > p { max-width: 400px; color: rgba(246,245,251,.48); font-size: .9rem; line-height: 1.65; }
 .glimpsie-module-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: .75rem; }
 .glimpsie-module-grid article, .glimpsie-world__grid article { position: relative; min-height: 250px; padding: 1.3rem; overflow: hidden; border: 1px solid var(--g-line); border-radius: 1.5rem; background: rgba(255,255,255,.025); transition: transform .28s ease,border-color .28s ease; }
-.glimpsie-module-grid article:hover, .glimpsie-world__grid article:hover { transform: translateY(-6px); border-color: rgba(181,173,225,.45); }
+.glimpsie-module-grid article:hover, .glimpsie-module-grid article.is-active, .glimpsie-world__grid article:hover { transform: translateY(-6px); border-color: rgba(181,173,225,.45); }
+.glimpsie-hero--copy { display: block; min-height: 0; }
+.glimpsie-preview__glance strong { display: block; }
 .glimpsie-module-grid article > span { position: absolute; top: .65rem; right: 1rem; color: rgba(246,245,251,.06); font-size: 3.8rem; font-weight: 900; }
 .glimpsie-module-grid svg, .glimpsie-world__grid svg { width: 2.1rem; height: 2.1rem; color: var(--g-primary); }
 .glimpsie-module-grid h3 { margin-top: 4.2rem; font-size: 1.05rem; }
@@ -91,7 +93,7 @@
 @keyframes glimpsie-drift { to { transform:translate3d(8%,8%,0) scale(1.08); } }
 @keyframes glimpsie-pulse { 50% { opacity:.45; transform:scale(.75); } }
 
-@media(max-width:900px){.glimpsie-hero{grid-template-columns:1fr}.glimpsie-preview{margin-top:1rem}.glimpsie-module-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.product-story{display:flex;flex-direction:column}.product-story__flow{display:contents}.product-story .glimpsie-hero{order:1}.product-story__stage{order:2;position:static}.product-story .glimpsie-modules{order:3}.glimpsie-hero{grid-template-columns:1fr}.glimpsie-preview{margin-top:1rem}.glimpsie-module-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.glimpsie-nav{grid-template-columns:1fr auto}.glimpsie-nav>span{display:none}.glimpsie-hero{min-height:auto;padding:1.25rem}.glimpsie-brand{margin-bottom:3rem}.glimpsie-hero h1{font-size:clamp(3.7rem,17vw,5.2rem)}.glimpsie-modules>header{flex-direction:column;align-items:flex-start;gap:1rem}.glimpsie-module-grid,.glimpsie-world__grid{grid-template-columns:1fr}.glimpsie-module-grid article{min-height:220px}.glimpsie-footer{flex-direction:column;align-items:center;text-align:center}.glimpsie-policy section ul,.glimpsie-policy__pair,.glimpsie-policy__contacts{grid-template-columns:1fr}}
 
 @media(prefers-reduced-motion:reduce){.glimpsie-orb,.glimpsie-status>span,.glimpsie-cta>div>span{animation:none!important}}

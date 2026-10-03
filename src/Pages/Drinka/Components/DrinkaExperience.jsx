@@ -12,7 +12,7 @@ const drinkTypes = [
   "Beer", "Wine", "Gin", "Rakı", "Rum", "Tequila", "Vodka", "Whisky", "Cocktail",
 ];
 
-export default function DrinkaExperience({ t }) {
+export default function DrinkaExperience({ t, activeStep = 0 }) {
   return (
     <section className="drinka-experience">
       <header className="drinka-section-heading">
@@ -25,7 +25,7 @@ export default function DrinkaExperience({ t }) {
 
       <div className="drinka-steps">
         {steps.map(({ key, icon: Icon }, index) => (
-          <article key={key} className="drinka-step">
+          <article key={key} className={activeStep === index ? "drinka-step is-active" : "drinka-step"}>
             <span className="drinka-step__number">0{index + 1}</span>
             <Icon aria-hidden="true" />
             <h3>{t(`experience.steps.${key}.title`)}</h3>

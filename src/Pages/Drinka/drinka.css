@@ -8,10 +8,10 @@
   --drinka-line: rgba(255, 255, 255, 0.09);
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
   background:
     radial-gradient(circle at 82% 7%, rgba(117, 21, 35, 0.24), transparent 29rem),
     linear-gradient(180deg, #151517, #0c0c0d 60%);
+  overflow: visible;
   color: var(--drinka-cream);
   font-family: "Epilogue", sans-serif;
 }
@@ -20,6 +20,7 @@
 .drinka-ambient__grain {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   pointer-events: none;
 }
 
@@ -371,10 +372,70 @@
   transition: transform 280ms ease, border-color 280ms ease, background 280ms ease;
 }
 
-.drinka-step:hover {
+.drinka-step:hover,
+.drinka-step.is-active {
   transform: translateY(-7px);
   border-color: rgba(142, 58, 78, 0.48);
   background: rgba(142, 58, 78, 0.08);
+}
+
+.drinka-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.92fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.drinka-story__flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.drinka-story__stage {
+  position: sticky;
+  top: 5.5rem;
+}
+
+.drinka-story .drinka-hero {
+  display: block;
+  min-height: 0;
+}
+
+.drinka-story .drinka-steps {
+  grid-template-columns: 1fr;
+}
+
+.drinka-story .drinka-step {
+  min-height: 180px;
+}
+
+.drinka-device__caption {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 1rem;
+  background: rgba(12, 12, 13, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.drinka-device__caption span {
+  color: #d3b5bc;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.drinka-device__caption strong {
+  font-size: 0.92rem;
+  line-height: 1.2;
 }
 
 .drinka-step__number {
@@ -565,6 +626,12 @@
 }
 
 @media (max-width: 960px) {
+  .drinka-story { display: flex; flex-direction: column; }
+  .drinka-story__flow { display: contents; }
+  .drinka-story .drinka-hero { order: 1; }
+  .drinka-story__stage { order: 2; position: static; }
+  .drinka-story .drinka-experience { order: 3; }
+  .drinka-story .drinka-steps { grid-template-columns: 1fr 1fr; }
   .drinka-hero { grid-template-columns: 1fr; }
   .drinka-device-stage { width: min(100%, 560px); margin-inline: auto; }
   .drinka-steps { grid-template-columns: 1fr 1fr; }

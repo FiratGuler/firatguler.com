@@ -8,6 +8,7 @@ export default function WordyLogoText({ t }) {
         <img 
           src={wordyLogo} 
           alt="Wordy Logo" 
+          style={{ viewTransitionName: "app-icon-wordy" }}
           className="size-20 md:size-40 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 border-2 md:border-4 border-white/20"
         />
         <div className="absolute inset-0 bg-wordy-accent/20 blur-2xl -z-10 rounded-full scale-75" />

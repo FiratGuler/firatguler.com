@@ -8,6 +8,7 @@ export default function BoardyLogoText({ t }) {
         <img 
           src={boardyLogo} 
           alt="Boardy Logo" 
+          style={{ viewTransitionName: "app-icon-boardy" }}
           className="size-20 md:size-40 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500  "
         />
         <div className="absolute inset-0 bg-boardy-accent/20 blur-2xl -z-10 rounded-full scale-75" />

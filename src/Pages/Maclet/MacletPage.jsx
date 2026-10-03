@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import {
   MdCheckCircle,
   MdContentPaste,
@@ -13,6 +14,7 @@ import {
 } from "react-icons/md";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
+import { useScrollStep } from "../../Core/Motion/useScrollStep";
 import macletLogo from "./Assets/maclet_logo.png";
 import en from "../../Locale/i18n/en/maclet.json";
 import tr from "../../Locale/i18n/tr/maclet.json";
@@ -29,6 +31,10 @@ const featureIcons = {
 export default function MacletPage() {
   const [lang, setLang] = useState("en");
   const locales = { en, tr };
+  const featuresRef = useRef(null);
+  const featureKeys = Object.keys(featureIcons);
+  const step = useScrollStep(featuresRef, featureKeys.length);
+  const activeKey = featureKeys[step];
   const t = (key) => key.split(".").reduce((value, item) => value?.[item], locales[lang]) || key;
 
   return (
@@ -42,15 +48,31 @@ export default function MacletPage() {
       </header>
 
       <main className="maclet-main">
-        <section className="maclet-hero">
+        <div className="product-story">
+          <div className="product-story__flow">
+        <section className="maclet-hero maclet-hero--copy">
           <div className="maclet-hero__copy">
-            <div className="maclet-brand"><img src={macletLogo} alt="" /><span>Maclet<small>{t("brand.tagline")}</small></span></div>
+            <div className="maclet-brand"><img src={macletLogo} alt="" style={{ viewTransitionName: "app-icon-maclet" }} /><span>Maclet<small>{t("brand.tagline")}</small></span></div>
             <span className="maclet-eyebrow">{t("hero.eyebrow")}</span>
             <h1>{t("hero.title")} <em>{t("hero.highlight")}</em></h1>
             <p>{t("hero.description")}</p>
             <div className="maclet-status"><span />{t("hero.status")}</div>
           </div>
+        </section>
 
+        <section className="maclet-features" ref={featuresRef}>
+          <header><div><span className="maclet-eyebrow">01 / {t("features.eyebrow")}</span><h2>{t("features.title")}</h2></div><p>{t("features.description")}</p></header>
+          <div className="maclet-feature-grid">
+            {Object.entries(featureIcons).map(([key, Icon], index) => (
+              <article key={key} className={`${index === 0 ? "maclet-feature maclet-feature--wide" : "maclet-feature"}${step === index ? " is-active" : ""}`}>
+                <span>0{index + 1}</span><Icon aria-hidden="true" /><h3>{t(`features.items.${key}.title`)}</h3><p>{t(`features.items.${key}.description`)}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+          </div>
+
+          <aside className="product-story__stage">
           <div className="maclet-demo" aria-label={t("hero.previewLabel")}>
             <div className="maclet-demo__menubar">
               <span className="maclet-demo__app"><img src={macletLogo} alt="" />Maclet</span><i />
@@ -58,31 +80,33 @@ export default function MacletPage() {
             </div>
             <div className="maclet-panel">
               <div className="maclet-panel__title"><span><MdMusicNote /></span><div><strong>{t("hero.nowPlaying")}</strong><small>MACLET</small></div><MdTune /></div>
-              <div className="maclet-player">
+              <div className={activeKey === "playing" ? "maclet-player is-hot" : "maclet-player"}>
                 <div className="maclet-player__art"><MdGraphicEq /></div>
                 <div><strong>{t("hero.track")}</strong><small>{t("hero.artist")}</small></div>
                 <div className="maclet-player__controls"><MdKeyboardArrowLeft /><MdPause /><MdKeyboardArrowRight /></div>
               </div>
-              <div className="maclet-volume"><span><MdGraphicEq /> Music</span><i><b /></i><strong>72%</strong></div>
+              <div className={activeKey === "mixer" ? "maclet-volume is-hot" : "maclet-volume"}><span><MdGraphicEq /> Music</span><i><b /></i><strong>72%</strong></div>
               <div className="maclet-quick-grid">
-                <div><MdCheckCircle /><span>{t("hero.tasks")}</span></div>
-                <div><MdOutlineTimer /><span>{t("hero.timer")}</span></div>
-                <div><MdContentPaste /><span>{t("hero.clipboard")}</span></div>
+                <div className={activeKey === "tasks" ? "is-hot" : undefined}><MdCheckCircle /><span>{t("hero.tasks")}</span></div>
+                <div className={activeKey === "timer" ? "is-hot" : undefined}><MdOutlineTimer /><span>{t("hero.timer")}</span></div>
+                <div className={activeKey === "clipboard" ? "is-hot" : undefined}><MdContentPaste /><span>{t("hero.clipboard")}</span></div>
               </div>
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={activeKey}
+                  className="maclet-demo__caption"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.28 }}
+                >
+                  {t(`features.items.${activeKey}.title`)}
+                </motion.p>
+              </AnimatePresence>
             </div>
           </div>
-        </section>
-
-        <section className="maclet-features">
-          <header><div><span className="maclet-eyebrow">01 / {t("features.eyebrow")}</span><h2>{t("features.title")}</h2></div><p>{t("features.description")}</p></header>
-          <div className="maclet-feature-grid">
-            {Object.entries(featureIcons).map(([key, Icon], index) => (
-              <article key={key} className={index === 0 ? "maclet-feature maclet-feature--wide" : "maclet-feature"}>
-                <span>0{index + 1}</span><Icon aria-hidden="true" /><h3>{t(`features.items.${key}.title`)}</h3><p>{t(`features.items.${key}.description`)}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+          </aside>
+        </div>
 
         <section className="maclet-native">
           <div className="maclet-native__copy"><span className="maclet-eyebrow">02 / {t("native.eyebrow")}</span><h2>{t("native.title")}</h2><p>{t("native.description")}</p></div>

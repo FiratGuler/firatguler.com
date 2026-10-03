@@ -1,24 +1,37 @@
 import React from "react";
+import { motion, useReducedMotion } from "motion/react";
 import apps from "../../../Models/apps";
 import AppCard from "./AppCard";
+import { Reveal } from "../../../Core/Motion/Reveal";
 import "../../../Utils/global.css";
 
 export default function FeaturedApps({ t }) {
+  const reduce = useReducedMotion();
+
   return (
-    <section className="portfolio-section reveal reveal--three" id="work">
-      <div className="section-heading">
+    <section className="portfolio-section" id="work">
+      <Reveal className="section-heading">
         <div className="section-heading__copy">
           <span className="section-index">01 / {t("featuredApps.eyebrow")}</span>
           <h2 className="section-title">{t("featuredApps.title")}</h2>
           <p className="section-subtitle">{t("featuredApps.subtitle")}</p>
         </div>
+      </Reveal>
 
-      </div>
-
-      <div className="app-grid">
+      <motion.div
+        className="app-grid"
+        initial={reduce ? false : "hidden"}
+        whileInView="show"
+        viewport={{ once: true, amount: 0.12 }}
+        variants={{
+          hidden: {},
+          show: {},
+        }}
+      >
         {apps.map((app, index) => (
           <AppCard
             key={app.id}
+            id={app.id}
             image={app.image}
             appStoreLink={app.appStoreLink}
             detailLink={app.detailLink}
@@ -33,7 +46,7 @@ export default function FeaturedApps({ t }) {
             buttonDetail={t("featuredApps.detailButton")}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

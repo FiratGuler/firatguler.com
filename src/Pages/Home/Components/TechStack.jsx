@@ -1,5 +1,6 @@
 import React from "react";
 import techData from "../../../Models/TechData";
+import { RevealGroup, RevealItem } from "../../../Core/Motion/Reveal";
 
 const tickerItems = [
   "Swift",
@@ -18,7 +19,7 @@ const tickerItems = [
 
 export default function TechStack({ t }) {
   return (
-    <section className="stack-section reveal" id="stack">
+    <RevealGroup as="section" className="stack-section" id="stack">
       <div className="stack-ticker" aria-hidden="true">
         <div className="stack-ticker__track">
           {tickerItems.map((item, index) => (
@@ -41,16 +42,16 @@ export default function TechStack({ t }) {
 
         <div className="stack-grid">
           {techData.map((tech, index) => (
-            <article className="stack-card" key={tech.category}>
+            <RevealItem as="article" className="stack-card" key={tech.category}>
               <div className="stack-card__index">0{index + 1}</div>
               <h3>{t(`techStack.categories.${tech.category}`)}</h3>
               <ul>
                 {tech.items.map((item) => <li key={item}>{item}</li>)}
               </ul>
-            </article>
+            </RevealItem>
           ))}
         </div>
       </div>
-    </section>
+    </RevealGroup>
   );
 }

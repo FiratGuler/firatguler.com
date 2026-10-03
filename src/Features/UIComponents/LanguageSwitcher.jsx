@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function LanguageSwitcher({ lang, setLang, bgColor, textColor }) {
   const switchLanguage = () => {
@@ -15,9 +16,21 @@ export default function LanguageSwitcher({ lang, setLang, bgColor, textColor }) 
       onClick={switchLanguage}
       aria-label={lang === "en" ? "Türkçeye geç" : "Switch to English"}
     >
-      <span className={lang === "tr" ? "is-active" : ""}>TR</span>
+      <motion.span
+        className={lang === "tr" ? "is-active" : ""}
+        animate={{ opacity: lang === "tr" ? 1 : 0.32, y: lang === "tr" ? 0 : 2 }}
+        transition={{ duration: 0.18 }}
+      >
+        TR
+      </motion.span>
       <span className="language-switcher__divider" aria-hidden="true" />
-      <span className={lang === "en" ? "is-active" : ""}>EN</span>
+      <motion.span
+        className={lang === "en" ? "is-active" : ""}
+        animate={{ opacity: lang === "en" ? 1 : 0.32, y: lang === "en" ? 0 : 2 }}
+        transition={{ duration: 0.18 }}
+      >
+        EN
+      </motion.span>
     </button>
   );
 }

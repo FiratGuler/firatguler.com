@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { MdApps, MdCode, MdPersonOutline, MdRoute } from "react-icons/md";
 
 const items = [
@@ -8,7 +9,8 @@ const items = [
   { id: "stack", icon: MdCode },
 ];
 
-export default function HomeContentNavigation({ t }) {
+export default function HomeContentNavigation({ t, lang = "en" }) {
+  const reduce = useReducedMotion();
   const [activeSection, setActiveSection] = useState("intro");
 
   const navigateToSection = (id) => {
@@ -54,7 +56,23 @@ export default function HomeContentNavigation({ t }) {
           >
             <span className="content-navigation__index">0{index + 1}</span>
             <Icon aria-hidden="true" />
-            <span className="content-navigation__label">{t(`navigation.sections.${id}`)}</span>
+            <span className="content-navigation__label">
+              {reduce ? (
+                t(`navigation.sections.${id}`)
+              ) : (
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={`${lang}-${id}`}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {t(`navigation.sections.${id}`)}
+                  </motion.span>
+                </AnimatePresence>
+              )}
+            </span>
           </button>
         );
       })}

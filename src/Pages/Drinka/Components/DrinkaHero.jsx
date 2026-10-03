@@ -1,15 +1,57 @@
 import React from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { FaApple } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import drinkaLogo from "../Assets/drinka_logo.png";
 import heroImage from "../Assets/drinka_mobile.png";
+
+const stepKeys = ["capture", "place", "people", "revisit"];
+
+export function DrinkaStage({ t, step = 0 }) {
+  const key = stepKeys[step] || stepKeys[0];
+
+  return (
+    <div className="drinka-device-stage">
+      <div className="drinka-device-stage__ring" aria-hidden="true" />
+      <span className="drinka-device-stage__label drinka-device-stage__label--map">
+        {t("hero.floating.map")}
+      </span>
+      <span className="drinka-device-stage__label drinka-device-stage__label--journal">
+        {t("hero.floating.journal")}
+      </span>
+      <div className="drinka-device">
+        <div className="drinka-device__island" aria-hidden="true" />
+        <img src={heroImage} alt={t("hero.imageAlt")} />
+        <div className="drinka-device__fade" aria-hidden="true" />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={key}
+            className="drinka-device__caption"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span>0{step + 1}</span>
+            <strong>{t(`experience.steps.${key}.title`)}</strong>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+      <div className="drinka-memory-card">
+        <span>{t("hero.memoryCard.eyebrow")}</span>
+        <strong>{t("hero.memoryCard.title")}</strong>
+        <small>{t("hero.memoryCard.detail")}</small>
+      </div>
+    </div>
+  );
+}
 
 export default function DrinkaHero({ t, appStoreUrl }) {
   return (
     <section className="drinka-hero">
       <div className="drinka-hero__copy">
         <div className="drinka-brand-lockup">
-          <img src={drinkaLogo} alt="" />
+          <img src={drinkaLogo} alt="" style={{ viewTransitionName: "app-icon-drinka" }} />
           <div>
             <strong>Drinka</strong>
             <span>{t("brand.tagline")}</span>
@@ -47,25 +89,6 @@ export default function DrinkaHero({ t, appStoreUrl }) {
         </dl>
       </div>
 
-      <div className="drinka-device-stage">
-        <div className="drinka-device-stage__ring" aria-hidden="true" />
-        <span className="drinka-device-stage__label drinka-device-stage__label--map">
-          {t("hero.floating.map")}
-        </span>
-        <span className="drinka-device-stage__label drinka-device-stage__label--journal">
-          {t("hero.floating.journal")}
-        </span>
-        <div className="drinka-device">
-          <div className="drinka-device__island" aria-hidden="true" />
-          <img src={heroImage} alt={t("hero.imageAlt")} />
-          <div className="drinka-device__fade" aria-hidden="true" />
-        </div>
-        <div className="drinka-memory-card">
-          <span>{t("hero.memoryCard.eyebrow")}</span>
-          <strong>{t("hero.memoryCard.title")}</strong>
-          <small>{t("hero.memoryCard.detail")}</small>
-        </div>
-      </div>
     </section>
   );
 }

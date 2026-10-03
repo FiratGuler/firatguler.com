@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import ProductSocialSection from "../../Features/UIComponents/ProductSocialSection";
-import DrinkaHero from "./Components/DrinkaHero";
+import DrinkaHero, { DrinkaStage } from "./Components/DrinkaHero";
 import DrinkaExperience from "./Components/DrinkaExperience";
 import DrinkaCapabilities from "./Components/DrinkaCapabilities";
+import { useScrollStep } from "../../Core/Motion/useScrollStep";
+import { Reveal } from "../../Core/Motion/Reveal";
 import en from "../../Locale/i18n/en/drinka.json";
 import tr from "../../Locale/i18n/tr/drinka.json";
 import "./drinka.css";
@@ -17,6 +19,9 @@ export default function DrinkaPage() {
   const navigate = useNavigate();
   const [lang, setLang] = useState("en");
   const locales = { en, tr };
+
+  const storyRef = useRef(null);
+  const step = useScrollStep(storyRef, 4);
 
   const t = (key) => {
     const keys = key.split(".");
@@ -49,9 +54,18 @@ export default function DrinkaPage() {
       </header>
 
       <main className="drinka-main">
-        <DrinkaHero t={t} appStoreUrl={APP_STORE_URL} />
-        <DrinkaExperience t={t} />
+        <div className="drinka-story" ref={storyRef}>
+          <div className="drinka-story__flow">
+            <DrinkaHero t={t} appStoreUrl={APP_STORE_URL} />
+            <DrinkaExperience t={t} activeStep={step} />
+          </div>
+          <div className="drinka-story__stage">
+            <DrinkaStage t={t} step={step} />
+          </div>
+        </div>
+        <Reveal>
         <DrinkaCapabilities t={t} />
+        </Reveal>
         <ProductSocialSection
           variant="drinka"
           url="https://www.firatguler.com/drinka"

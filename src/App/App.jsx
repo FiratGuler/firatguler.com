@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "../Pages/Home/HomePage";
 import WordyPage from "../Pages/Wordy/WordyPage.jsx";
@@ -16,7 +16,7 @@ import SeoManager from "../Core/SEO/SeoManager";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname]);
 

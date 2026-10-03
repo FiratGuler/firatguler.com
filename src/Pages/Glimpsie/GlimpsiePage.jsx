@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import {
   MdAutoAwesome,
@@ -17,6 +18,8 @@ import {
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
 import ProductSocialSection from "../../Features/UIComponents/ProductSocialSection";
+import { useScrollStep } from "../../Core/Motion/useScrollStep";
+import { Reveal } from "../../Core/Motion/Reveal";
 import glimpsieLogo from "./Assets/glimpsie_logo.png";
 import en from "../../Locale/i18n/en/glimpsie.json";
 import tr from "../../Locale/i18n/tr/glimpsie.json";
@@ -32,6 +35,9 @@ export default function GlimpsiePage() {
   const navigate = useNavigate();
   const [lang, setLang] = useState("en");
   const locales = { en, tr };
+  const modulesRef = useRef(null);
+  const step = useScrollStep(modulesRef, modules.length);
+  const activeKey = modules[step][0];
   const t = (key) => key.split(".").reduce((value, item) => value?.[item], locales[lang]) || key;
 
   return (
@@ -46,36 +52,55 @@ export default function GlimpsiePage() {
       </header>
 
       <main className="glimpsie-main">
-        <section className="glimpsie-hero">
-          <div className="glimpsie-hero__copy">
-            <div className="glimpsie-brand"><img src={glimpsieLogo} alt="" /><span>Glimpsie<small>{t("brand.tagline")}</small></span></div>
-            <span className="glimpsie-eyebrow">{t("hero.eyebrow")}</span>
-            <h1>{t("hero.title")} <em>{t("hero.highlight")}</em></h1>
-            <p>{t("hero.description")}</p>
-            <div className="glimpsie-status"><span />{t("hero.status")}</div>
+        <div className="product-story">
+          <div className="product-story__flow">
+            <section className="glimpsie-hero glimpsie-hero--copy">
+              <div className="glimpsie-hero__copy">
+                <div className="glimpsie-brand"><img src={glimpsieLogo} alt="" style={{ viewTransitionName: "app-icon-glimpsie" }} /><span>Glimpsie<small>{t("brand.tagline")}</small></span></div>
+                <span className="glimpsie-eyebrow">{t("hero.eyebrow")}</span>
+                <h1>{t("hero.title")} <em>{t("hero.highlight")}</em></h1>
+                <p>{t("hero.description")}</p>
+                <div className="glimpsie-status"><span />{t("hero.status")}</div>
+              </div>
+            </section>
+
+            <section className="glimpsie-modules" ref={modulesRef}>
+              <header><div><span className="glimpsie-eyebrow">01 / {t("modules.eyebrow")}</span><h2>{t("modules.title")}</h2></div><p>{t("modules.description")}</p></header>
+              <div className="glimpsie-module-grid">
+                {modules.map(([key, Icon], index) => (
+                  <article key={key} className={step === index ? "is-active" : undefined}><span>0{index + 1}</span><Icon aria-hidden="true" /><h3>{t(`modules.items.${key}.title`)}</h3><p>{t(`modules.items.${key}.description`)}</p></article>
+                ))}
+              </div>
+            </section>
           </div>
 
-          <div className="glimpsie-preview" aria-label={t("hero.previewLabel")}>
-            <div className="glimpsie-preview__top"><span>{t("preview.month")}</span><b>12</b></div>
-            <div className="glimpsie-preview__calendar">
-              {["8", "9", "10", "11", "12", "13", "14"].map((day) => <span key={day} className={day === "12" ? "active" : ""}>{day}</span>)}
+          <aside className="product-story__stage">
+            <div className="glimpsie-preview" aria-label={t("hero.previewLabel")}>
+              <div className="glimpsie-preview__top"><span>{t("preview.month")}</span><b>12</b></div>
+              <div className="glimpsie-preview__calendar">
+                {["8", "9", "10", "11", "12", "13", "14"].map((day) => <span key={day} className={day === "12" ? "active" : ""}>{day}</span>)}
+              </div>
+              <div className="glimpsie-preview__question">{t("preview.question")}</div>
+              <div className="glimpsie-preview__moods"><i>☹</i><i>◔</i><i className="selected">●</i><i>◕</i><i>☺</i></div>
+              <div className="glimpsie-preview__glance">
+                <span>{t("preview.glance")}</span>
+                <AnimatePresence mode="wait">
+                  <motion.strong
+                    key={activeKey}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.28 }}
+                  >
+                    {t(`modules.items.${activeKey}.title`)}
+                  </motion.strong>
+                </AnimatePresence>
+              </div>
             </div>
-            <div className="glimpsie-preview__question">{t("preview.question")}</div>
-            <div className="glimpsie-preview__moods"><i>☹</i><i>◔</i><i className="selected">●</i><i>◕</i><i>☺</i></div>
-            <div className="glimpsie-preview__glance"><span>{t("preview.glance")}</span><strong>{t("preview.summary")}</strong></div>
-          </div>
-        </section>
+          </aside>
+        </div>
 
-        <section className="glimpsie-modules">
-          <header><div><span className="glimpsie-eyebrow">01 / {t("modules.eyebrow")}</span><h2>{t("modules.title")}</h2></div><p>{t("modules.description")}</p></header>
-          <div className="glimpsie-module-grid">
-            {modules.map(([key, Icon], index) => (
-              <article key={key}><span>0{index + 1}</span><Icon aria-hidden="true" /><h3>{t(`modules.items.${key}.title`)}</h3><p>{t(`modules.items.${key}.description`)}</p></article>
-            ))}
-          </div>
-        </section>
-
-        <section className="glimpsie-world">
+        <Reveal as="section" className="glimpsie-world">
           <header><span className="glimpsie-eyebrow">02 / {t("world.eyebrow")}</span><h2>{t("world.title")}</h2><p>{t("world.description")}</p></header>
           <div className="glimpsie-world__grid">
             <article><MdCalendarMonth /><h3>{t("world.calendar.title")}</h3><p>{t("world.calendar.description")}</p></article>
@@ -83,7 +108,7 @@ export default function GlimpsiePage() {
             <article><MdAutoAwesome /><h3>{t("world.themes.title")}</h3><p>{t("world.themes.description")}</p><div className="glimpsie-theme-dots"><i /><i /><i /><i /><i /></div></article>
             <article><MdOutlineWidgets /><h3>{t("world.widgets.title")}</h3><p>{t("world.widgets.description")}</p></article>
           </div>
-        </section>
+        </Reveal>
 
         <ProductSocialSection
           variant="glimpsie"
