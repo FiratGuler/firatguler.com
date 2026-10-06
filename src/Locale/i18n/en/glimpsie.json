@@ -29,6 +29,20 @@
     "themes": { "title": "Mood Themes", "description": "Choose Classic, Cosmos, Garden, Arcade or Ocean for a mood language that feels yours." },
     "widgets": { "title": "Home Screen Widgets", "description": "Quick add, streak, weekly entries and calendar views stay close on the Home Screen." }
   },
+  "widgets": {
+    "eyebrow": "On your Home Screen",
+    "title": "Your journal, at a glance.",
+    "description": "Add a day, follow a gentle streak or revisit your calendar without leaving the Home Screen.",
+    "items": {
+      "calendarMedium": "Monthly Calendar",
+      "add": "Quick Add",
+      "weekEntries": "This Week",
+      "fortune": "Daily Fortune",
+      "calendarSmall": "Compact Calendar",
+      "streak": "Current Streak",
+      "weeklyStreak": "Weekly Streak"
+    }
+  },
   "cta": { "eyebrow": "A quieter way to remember", "title": "Your days deserve more than a blur.", "description": "Glimpsie is currently in development. The landing page and privacy information are ready while the product continues to take shape." },
   "social": { "eyebrow": "Share a glimpse", "title": "Some days are better shared.", "description": "Send Glimpsie to someone who would enjoy a gentler way to notice and remember their days.", "action": "Share on", "shareText": "Glimpsie is a gentle journal for every kind of day." },
   "footer": { "credit": "Created by Fırat Güler", "privacy": "Privacy Policy" }

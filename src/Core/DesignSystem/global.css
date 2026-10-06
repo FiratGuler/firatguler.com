@@ -332,28 +332,6 @@
   line-height: 1.7;
 }
 
-.process-section__learning {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: 1.5rem;
-  padding: 0.65rem 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.035);
-  font-size: 0.7rem;
-}
-
-.process-section__learning span {
-  color: var(--home-muted);
-}
-
-.process-section__learning strong {
-  color: var(--home-accent);
-  font-weight: 700;
-}
-
 .process-flow {
   display: flex;
   align-items: stretch;

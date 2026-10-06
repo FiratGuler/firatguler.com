@@ -6,6 +6,7 @@ import glimpsieImage from "../Pages/Glimpsie/Assets/glimpsie_logo.png";
 import macletImage from "../Pages/Maclet/Assets/maclet_logo.png";
 
 const apps = [
+  /*
   {
     id: "maclet",
     image: macletImage,
@@ -14,6 +15,7 @@ const apps = [
     detailLink: "/maclet",
     tags: ["Swift", "SwiftUI", "AppKit", "Core Audio", "macOS"]
   },
+  */
   {
     id: "glimpsie",
     image: glimpsieImage,

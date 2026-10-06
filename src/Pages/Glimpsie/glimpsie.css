@@ -76,6 +76,21 @@
 .glimpsie-theme-dots i { width: 20px; height: 20px; border-radius: 50%; background: var(--g-primary); }
 .glimpsie-theme-dots i:nth-child(2) { background:#7584c9; }.glimpsie-theme-dots i:nth-child(3) { background:#71a879; }.glimpsie-theme-dots i:nth-child(4) { background:#e2859c; }.glimpsie-theme-dots i:nth-child(5) { background:#55a9b4; }
 
+.glimpsie-widgets { position:relative; overflow:hidden; padding:clamp(1.5rem,5vw,4rem); border:1px solid var(--g-line); border-radius:clamp(1.6rem,4vw,2.75rem); background:radial-gradient(circle at 85% 0,rgba(181,173,225,.14),transparent 28rem),rgba(35,38,50,.82); box-shadow:0 32px 90px rgba(0,0,0,.28); backdrop-filter:blur(24px); }
+.glimpsie-widgets > header { display:flex; align-items:flex-end; justify-content:space-between; gap:3rem; margin-bottom:2.5rem; }
+.glimpsie-widgets h2 { max-width:720px; margin-top:.7rem; font-size:clamp(2.5rem,5vw,4.7rem); font-weight:720; letter-spacing:-.065em; line-height:.96; }
+.glimpsie-widgets header p { max-width:400px; color:rgba(246,245,251,.48); font-size:.9rem; line-height:1.65; }
+.glimpsie-widget-gallery { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:.85rem; }
+.glimpsie-widget-card { position:relative; overflow:hidden; border:1px solid rgba(246,245,251,.1); border-radius:1.65rem; background:#171a28; box-shadow:0 22px 55px rgba(0,0,0,.28); transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s ease; }
+.glimpsie-widget-card--wide { grid-column:span 7; }
+.glimpsie-widget-card--compact { grid-column:span 5; }
+.glimpsie-widget-card--third { grid-column:span 4; }
+.glimpsie-widget-card img { display:block; width:100%; aspect-ratio:1164/711; object-fit:cover; transition:transform .65s cubic-bezier(.2,.8,.2,1),filter .35s ease; }
+.glimpsie-widget-card figcaption { position:absolute; left:1rem; bottom:1rem; display:flex; align-items:center; gap:.55rem; padding:.58rem .75rem; border:1px solid rgba(255,255,255,.13); border-radius:999px; background:rgba(17,19,30,.78); color:rgba(246,245,251,.8); box-shadow:0 10px 28px rgba(0,0,0,.28); backdrop-filter:blur(14px); font-size:.6rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.glimpsie-widget-card figcaption span { color:var(--g-coral); font-size:.5rem; }
+.glimpsie-widget-card:hover { border-color:rgba(181,173,225,.4); transform:translateY(-5px); }
+.glimpsie-widget-card:hover img { transform:scale(1.025); filter:saturate(1.08); }
+
 .glimpsie-cta { display: flex; flex-direction: column; align-items: center; padding: clamp(4rem,10vw,8rem) 1.5rem; text-align: center; background: radial-gradient(circle at 50% 100%,rgba(240,180,174,.2),transparent 45%),rgba(35,38,50,.82); }
 .glimpsie-cta h2 { max-width: 850px; margin-top: .8rem; font-size: clamp(3rem,7vw,6.3rem); font-weight: 720; letter-spacing: -.075em; line-height: .92; }
 .glimpsie-cta > p { max-width: 600px; margin-top: 1.25rem; color: rgba(246,245,251,.5); line-height: 1.65; }
@@ -93,7 +108,7 @@
 @keyframes glimpsie-drift { to { transform:translate3d(8%,8%,0) scale(1.08); } }
 @keyframes glimpsie-pulse { 50% { opacity:.45; transform:scale(.75); } }
 
-@media(max-width:900px){.product-story{display:flex;flex-direction:column}.product-story__flow{display:contents}.product-story .glimpsie-hero{order:1}.product-story__stage{order:2;position:static}.product-story .glimpsie-modules{order:3}.glimpsie-hero{grid-template-columns:1fr}.glimpsie-preview{margin-top:1rem}.glimpsie-module-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.glimpsie-nav{grid-template-columns:1fr auto}.glimpsie-nav>span{display:none}.glimpsie-hero{min-height:auto;padding:1.25rem}.glimpsie-brand{margin-bottom:3rem}.glimpsie-hero h1{font-size:clamp(3.7rem,17vw,5.2rem)}.glimpsie-modules>header{flex-direction:column;align-items:flex-start;gap:1rem}.glimpsie-module-grid,.glimpsie-world__grid{grid-template-columns:1fr}.glimpsie-module-grid article{min-height:220px}.glimpsie-footer{flex-direction:column;align-items:center;text-align:center}.glimpsie-policy section ul,.glimpsie-policy__pair,.glimpsie-policy__contacts{grid-template-columns:1fr}}
+@media(max-width:900px){.product-story{display:flex;flex-direction:column}.product-story__flow{display:contents}.product-story .glimpsie-hero{order:1}.product-story__stage{order:2;position:static}.product-story .glimpsie-modules{order:3}.glimpsie-hero{grid-template-columns:1fr}.glimpsie-preview{margin-top:1rem}.glimpsie-module-grid{grid-template-columns:repeat(2,1fr)}.glimpsie-widget-card--wide,.glimpsie-widget-card--compact{grid-column:span 6}.glimpsie-widget-card--third{grid-column:span 4}}
+@media(max-width:640px){.glimpsie-nav{grid-template-columns:1fr auto}.glimpsie-nav>span{display:none}.glimpsie-hero{min-height:auto;padding:1.25rem}.glimpsie-brand{margin-bottom:3rem}.glimpsie-hero h1{font-size:clamp(3.7rem,17vw,5.2rem)}.glimpsie-modules>header,.glimpsie-widgets>header{flex-direction:column;align-items:flex-start;gap:1rem}.glimpsie-module-grid,.glimpsie-world__grid{grid-template-columns:1fr}.glimpsie-module-grid article{min-height:220px}.glimpsie-widget-gallery{grid-template-columns:1fr}.glimpsie-widget-card,.glimpsie-widget-card--wide,.glimpsie-widget-card--compact,.glimpsie-widget-card--third{grid-column:auto}.glimpsie-footer{flex-direction:column;align-items:center;text-align:center}.glimpsie-policy section ul,.glimpsie-policy__pair,.glimpsie-policy__contacts{grid-template-columns:1fr}}
 
 @media(prefers-reduced-motion:reduce){.glimpsie-orb,.glimpsie-status>span,.glimpsie-cta>div>span{animation:none!important}}

@@ -29,6 +29,20 @@
     "themes": { "title": "Mood Temaları", "description": "Sana ait hissettiren bir duygu dili için Classic, Cosmos, Garden, Arcade veya Ocean seç." },
     "widgets": { "title": "Ana Ekran Widget'ları", "description": "Hızlı ekleme, seri, haftalık kayıtlar ve takvim Ana Ekran'da yakında dursun." }
   },
+  "widgets": {
+    "eyebrow": "Ana Ekranında",
+    "title": "Günlüğün, bir bakış uzağında.",
+    "description": "Ana Ekran'dan ayrılmadan gün ekle, sakin serini takip et veya takvimine yeniden göz at.",
+    "items": {
+      "calendarMedium": "Aylık Takvim",
+      "add": "Hızlı Ekle",
+      "weekEntries": "Bu Hafta",
+      "fortune": "Günün Şansı",
+      "calendarSmall": "Kompakt Takvim",
+      "streak": "Mevcut Seri",
+      "weeklyStreak": "Haftalık Seri"
+    }
+  },
   "cta": { "eyebrow": "Hatırlamanın daha sakin bir yolu", "title": "Günlerin bulanıklaşmaktan fazlasını hak ediyor.", "description": "Glimpsie şu anda geliştirme aşamasında. Ürün şekillenmeye devam ederken landing page ve gizlilik bilgileri hazır." },
   "social": { "eyebrow": "Bir iz paylaş", "title": "Bazı günler paylaşınca güzelleşir.", "description": "Günlerini daha sakin bir biçimde fark edip hatırlamak isteyecek biriyle Glimpsie'yi paylaş.", "action": "Şurada paylaş", "shareText": "Glimpsie, her türlü gün için sakin bir günlük." },
   "footer": { "credit": "Fırat Güler tarafından geliştirildi", "privacy": "Gizlilik Politikası" }

@@ -21,6 +21,13 @@ import ProductSocialSection from "../../Features/UIComponents/ProductSocialSecti
 import { useScrollStep } from "../../Core/Motion/useScrollStep";
 import { Reveal } from "../../Core/Motion/Reveal";
 import glimpsieLogo from "./Assets/glimpsie_logo.png";
+import widgetAdd from "./Assets/Widgets/widget.preview.add.small.png";
+import widgetCalendarMedium from "./Assets/Widgets/widget.preview.calendar.medium.png";
+import widgetCalendarSmall from "./Assets/Widgets/widget.preview.calendar.small.png";
+import widgetFortune from "./Assets/Widgets/widget.preview.fortune.cookie.small.png";
+import widgetStreak from "./Assets/Widgets/widget.preview.streak.small.png";
+import widgetWeekEntries from "./Assets/Widgets/widget.preview.week.entries.medium.png";
+import widgetWeeklyStreak from "./Assets/Widgets/widget.preview.weekly.streak.medium.png";
 import en from "../../Locale/i18n/en/glimpsie.json";
 import tr from "../../Locale/i18n/tr/glimpsie.json";
 import "./glimpsie.css";
@@ -29,6 +36,16 @@ const modules = [
   ["mood", MdEmojiEmotions], ["emotions", MdFavorite], ["doodle", MdDraw],
   ["dream", MdBedtime], ["note", MdNotes], ["movement", MdOutlineDirectionsRun],
   ["people", MdPeople], ["music", MdHeadphones],
+];
+
+const widgets = [
+  ["calendarMedium", widgetCalendarMedium, "glimpsie-widget-card--wide"],
+  ["add", widgetAdd, "glimpsie-widget-card--compact"],
+  ["weekEntries", widgetWeekEntries, "glimpsie-widget-card--wide"],
+  ["fortune", widgetFortune, "glimpsie-widget-card--compact"],
+  ["calendarSmall", widgetCalendarSmall, "glimpsie-widget-card--third"],
+  ["streak", widgetStreak, "glimpsie-widget-card--third"],
+  ["weeklyStreak", widgetWeeklyStreak, "glimpsie-widget-card--third"],
 ];
 
 export default function GlimpsiePage() {
@@ -107,6 +124,24 @@ export default function GlimpsiePage() {
             <article><MdLocalFireDepartment /><h3>{t("world.streak.title")}</h3><p>{t("world.streak.description")}</p></article>
             <article><MdAutoAwesome /><h3>{t("world.themes.title")}</h3><p>{t("world.themes.description")}</p><div className="glimpsie-theme-dots"><i /><i /><i /><i /><i /></div></article>
             <article><MdOutlineWidgets /><h3>{t("world.widgets.title")}</h3><p>{t("world.widgets.description")}</p></article>
+          </div>
+        </Reveal>
+
+        <Reveal as="section" className="glimpsie-widgets">
+          <header>
+            <div>
+              <span className="glimpsie-eyebrow">03 / {t("widgets.eyebrow")}</span>
+              <h2>{t("widgets.title")}</h2>
+            </div>
+            <p>{t("widgets.description")}</p>
+          </header>
+          <div className="glimpsie-widget-gallery">
+            {widgets.map(([key, image, className], index) => (
+              <figure className={`glimpsie-widget-card ${className}`} key={key}>
+                <img src={image} alt={t(`widgets.items.${key}`)} loading="lazy" />
+                <figcaption><span>0{index + 1}</span>{t(`widgets.items.${key}`)}</figcaption>
+              </figure>
+            ))}
           </div>
         </Reveal>
 

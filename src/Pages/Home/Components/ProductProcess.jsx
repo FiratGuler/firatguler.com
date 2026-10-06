@@ -16,10 +16,6 @@ export default function ProductProcess({ t }) {
         <span className="section-index">00 / {t("process.eyebrow")}</span>
         <h2>{t("process.title")}</h2>
         <p>{t("process.description")}</p>
-        <div className="process-section__learning">
-          <span>{t("process.learningLabel")}</span>
-          <strong>Node.js · PostgreSQL</strong>
-        </div>
       </div>
 
       <div className="process-flow">
