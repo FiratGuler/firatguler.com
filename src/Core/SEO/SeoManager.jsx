@@ -53,6 +53,7 @@ const privacyRoutes = {
   "/WordyPrivacyPolicy": "Wordy Privacy Policy",
   "/BoardyPrivacyPolicy": "Boardy Privacy Policy",
   "/DrinkaPrivacyPolicy": "Drinka Privacy Policy",
+  "/MacletPrivacyPolicy": "Maclet Privacy Policy",
   "/GlimpsiePrivacyPolicy": "Glimpsie Privacy Policy",
 };
 

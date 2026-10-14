@@ -59,3 +59,21 @@ kbd{padding:.15rem .4rem;border:1px solid var(--m-line);border-radius:.4rem;back
 @keyframes mc-thumb{0%,70%{opacity:0;transform:translateY(12px)}85%,100%{opacity:1;transform:none}}
 @keyframes mc-hub{0%,18%{background:rgba(107,92,255,.2);color:var(--m-blue)}22%,100%{background:rgba(255,255,255,.04);color:rgba(246,248,251,.5)}}
 @media(prefers-reduced-motion:reduce){.mc-scene *{animation:none!important}}
+
+/* Privacy policy */
+.maclet-policy__container{position:relative;z-index:1;width:min(860px,calc(100% - 2rem));margin-inline:auto;padding:2rem 0 3rem}
+.maclet-policy__back{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:2rem;color:#a79eff;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.maclet-policy__header{display:flex;align-items:center;gap:1.2rem;margin-bottom:2rem}.maclet-policy__header img{width:72px;height:72px;border-radius:18px}
+.maclet-policy__header h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:720;letter-spacing:-.05em}.maclet-policy__header p{margin-top:.3rem;color:rgba(246,248,251,.4);font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.maclet-policy main{display:flex;flex-direction:column;gap:1rem}
+.maclet-policy section{padding:1.5rem;border:1px solid var(--m-line);border-radius:1.5rem;background:rgba(27,35,49,.82)}
+.maclet-policy__notice{border-color:rgba(107,92,255,.35)!important;background:rgba(107,92,255,.1)!important;color:#dcd7ff;font-size:.85rem;line-height:1.7}
+.maclet-policy h2{display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem;font-size:1.05rem}.maclet-policy h2 svg{color:#a79eff}
+.maclet-policy p,.maclet-policy li{color:rgba(246,248,251,.58);font-size:.8rem;line-height:1.75}.maclet-policy p+ul,.maclet-policy ul+p{margin-top:.8rem}
+.maclet-policy ul{display:flex;flex-direction:column;gap:.4rem;padding-left:1.1rem;list-style:disc}
+.maclet-policy__perms{padding-left:0!important;list-style:none!important}.maclet-policy__perms li{display:flex;flex-direction:column;padding:.7rem .9rem;border:1px solid var(--m-line);border-radius:.9rem;background:rgba(255,255,255,.025)}.maclet-policy__perms strong{color:#f6f8fb}
+.maclet-policy__pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.maclet-policy__contacts{display:flex;flex-wrap:wrap;gap:.7rem}.maclet-policy__contacts a{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border:1px solid var(--m-line);border-radius:1rem;font-size:.75rem}.maclet-policy__contacts small{display:block;color:rgba(246,248,251,.4);font-size:.55rem;text-transform:uppercase;letter-spacing:.1em}.maclet-policy__contacts svg{color:#a79eff;font-size:1.2rem}
+.maclet-policy footer{padding-top:2rem;color:rgba(246,248,251,.3);font-size:.6rem;text-align:center}
+.maclet-footer button{color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit}.maclet-footer button:hover{color:#fff}
+@media(max-width:640px){.maclet-policy__pair{grid-template-columns:1fr}}

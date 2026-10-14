@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import { MdMusicNote, MdOutlineTimer, MdShield, MdTune } from "react-icons/md";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
@@ -11,6 +12,7 @@ import tr from "../../Locale/i18n/tr/maclet.json";
 import "./maclet.css";
 
 export default function MacletPage() {
+  const navigate = useNavigate();
   const [lang, setLang] = useState("en");
   const locales = { en, tr };
   const featuresRef = useRef(null);
@@ -93,7 +95,7 @@ export default function MacletPage() {
         </section>
       </main>
 
-      <footer className="maclet-footer"><p>© 2026 Maclet · {t("footer.credit")} Fırat Güler</p><span>SWIFT · SWIFTUI · APPKIT · CORE AUDIO</span></footer>
+      <footer className="maclet-footer"><p>© 2026 Maclet · {t("footer.credit")} Fırat Güler</p><button type="button" onClick={() => navigate("/MacletPrivacyPolicy")}>{t("footer.privacy")}</button><span>SWIFT · SWIFTUI · APPKIT · CORE AUDIO</span></footer>
     </div>
   );
 }

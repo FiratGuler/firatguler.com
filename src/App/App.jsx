@@ -8,6 +8,7 @@ import BoardyPrivacyPolicy from "../Pages/Boardy/BoardyPrivacyPolicy";
 import DrinkaPage from "../Pages/Drinka/DrinkaPage.jsx";
 import DrinkaPrivacyPolicy from "../Pages/Drinka/DrinkaPrivacyPolicy";
 import GlimpsiePage from "../Pages/Glimpsie/GlimpsiePage";
+import MacletPrivacyPolicy from "../Pages/Maclet/MacletPrivacyPolicy";
 import GlimpsiePrivacyPolicy from "../Pages/Glimpsie/GlimpsiePrivacyPolicy";
 import MacletPage from "../Pages/Maclet/MacletPage";
 import NotFoundPage from "../Pages/NotFound/NotFoundPage";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/WordyPrivacyPolicy" element={<WordyPrivacyPolicy />} />
         <Route path="/BoardyPrivacyPolicy" element={<BoardyPrivacyPolicy />} />
         <Route path="/DrinkaPrivacyPolicy" element={<DrinkaPrivacyPolicy />} />
+        <Route path="/MacletPrivacyPolicy" element={<MacletPrivacyPolicy />} />
         <Route path="/GlimpsiePrivacyPolicy" element={<GlimpsiePrivacyPolicy />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
