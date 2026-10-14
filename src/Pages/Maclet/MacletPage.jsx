@@ -1,32 +1,14 @@
 import React, { useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  MdCheckCircle,
-  MdContentPaste,
-  MdGraphicEq,
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
-  MdMusicNote,
-  MdOutlineTimer,
-  MdPause,
-  MdShield,
-  MdTune,
-} from "react-icons/md";
+import { MdMusicNote, MdOutlineTimer, MdShield, MdTune } from "react-icons/md";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
 import { useScrollStep } from "../../Core/Motion/useScrollStep";
+import { scenes, sceneIcons as featureIcons } from "./MacletScenes";
 import macletLogo from "./Assets/maclet_logo.png";
 import en from "../../Locale/i18n/en/maclet.json";
 import tr from "../../Locale/i18n/tr/maclet.json";
 import "./maclet.css";
-
-const featureIcons = {
-  playing: MdMusicNote,
-  mixer: MdGraphicEq,
-  tasks: MdCheckCircle,
-  timer: MdOutlineTimer,
-  clipboard: MdContentPaste,
-};
 
 export default function MacletPage() {
   const [lang, setLang] = useState("en");
@@ -35,7 +17,7 @@ export default function MacletPage() {
   const featureKeys = Object.keys(featureIcons);
   const step = useScrollStep(featuresRef, featureKeys.length);
   const activeKey = featureKeys[step];
-  const t = (key) => key.split(".").reduce((value, item) => value?.[item], locales[lang]) || key;
+  const t = (key) => key.split(".").reduce((value, item) => value?.[item], locales[lang]) || key.split(".").reduce((value, item) => value?.[item], en) || key;
 
   return (
     <div className="maclet-page product-page">
@@ -64,7 +46,7 @@ export default function MacletPage() {
           <header><div><span className="maclet-eyebrow">01 / {t("features.eyebrow")}</span><h2>{t("features.title")}</h2></div><p>{t("features.description")}</p></header>
           <div className="maclet-feature-grid">
             {Object.entries(featureIcons).map(([key, Icon], index) => (
-              <article key={key} className={`${index === 0 ? "maclet-feature maclet-feature--wide" : "maclet-feature"}${step === index ? " is-active" : ""}`}>
+              <article key={key} className={`${"maclet-feature"}${step === index ? " is-active" : ""}`}>
                 <span>0{index + 1}</span><Icon aria-hidden="true" /><h3>{t(`features.items.${key}.title`)}</h3><p>{t(`features.items.${key}.description`)}</p>
               </article>
             ))}
@@ -79,29 +61,17 @@ export default function MacletPage() {
               <span><MdMusicNote /> Focus</span><span><MdOutlineTimer /> 24:18</span>
             </div>
             <div className="maclet-panel">
-              <div className="maclet-panel__title"><span><MdMusicNote /></span><div><strong>{t("hero.nowPlaying")}</strong><small>MACLET</small></div><MdTune /></div>
-              <div className={activeKey === "playing" ? "maclet-player is-hot" : "maclet-player"}>
-                <div className="maclet-player__art"><MdGraphicEq /></div>
-                <div><strong>{t("hero.track")}</strong><small>{t("hero.artist")}</small></div>
-                <div className="maclet-player__controls"><MdKeyboardArrowLeft /><MdPause /><MdKeyboardArrowRight /></div>
-              </div>
-              <div className={activeKey === "mixer" ? "maclet-volume is-hot" : "maclet-volume"}><span><MdGraphicEq /> Music</span><i><b /></i><strong>72%</strong></div>
-              <div className="maclet-quick-grid">
-                <div className={activeKey === "tasks" ? "is-hot" : undefined}><MdCheckCircle /><span>{t("hero.tasks")}</span></div>
-                <div className={activeKey === "timer" ? "is-hot" : undefined}><MdOutlineTimer /><span>{t("hero.timer")}</span></div>
-                <div className={activeKey === "clipboard" ? "is-hot" : undefined}><MdContentPaste /><span>{t("hero.clipboard")}</span></div>
-              </div>
+              <div className="maclet-panel__title"><span>{React.createElement(featureIcons[activeKey])}</span><div><strong>{t(`features.items.${activeKey}.title`)}</strong><small>MACLET</small></div><MdTune /></div>
               <AnimatePresence mode="wait">
-                <motion.p
+                <motion.div
                   key={activeKey}
-                  className="maclet-demo__caption"
-                  initial={{ opacity: 0, y: 8 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
+                  exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.28 }}
                 >
-                  {t(`features.items.${activeKey}.title`)}
-                </motion.p>
+                  {React.createElement(scenes[activeKey], { t })}
+                </motion.div>
               </AnimatePresence>
             </div>
           </div>

@@ -41,7 +41,6 @@ export default function HomeContentNavigation({ t, lang = "en" }) {
 
   return (
     <nav className="content-navigation" aria-label={t("navigation.contentLabel")}>
-      <span className="content-navigation__rail" aria-hidden="true" />
       {items.map(({ id, icon: Icon }, index) => {
         const isActive = activeSection === id;
 

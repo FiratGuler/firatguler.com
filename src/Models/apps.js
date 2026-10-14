@@ -6,16 +6,16 @@ import glimpsieImage from "../Pages/Glimpsie/Assets/glimpsie_logo.png";
 import macletImage from "../Pages/Maclet/Assets/maclet_logo.png";
 
 const apps = [
-  /*
+  
   {
     id: "maclet",
     image: macletImage,
     platform: "macOS",
-    accent: "#62a8ff",
+    accent: "#6b5cff",
     detailLink: "/maclet",
     tags: ["Swift", "SwiftUI", "AppKit", "Core Audio", "macOS"]
   },
-  */
+  
   {
     id: "glimpsie",
     image: glimpsieImage,
