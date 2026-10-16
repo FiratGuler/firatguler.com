@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedinIn, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
+import apps from "../../Models/apps";
 import "./product-social-section.css";
 
 const channels = [
@@ -28,6 +29,8 @@ const channels = [
 ];
 
 export default function ProductSocialSection({ variant, url, t }) {
+  if (!apps.find((app) => app.id === variant)?.social?.length) return null;
+
   const shareText = t("social.shareText");
 
   return (

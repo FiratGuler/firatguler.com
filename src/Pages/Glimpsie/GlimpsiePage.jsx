@@ -17,6 +17,7 @@ import {
 } from "react-icons/md";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
+import ProductWidgetGallery from "../../Features/UIComponents/ProductWidgetGallery";
 import ProductFollowSection from "../../Features/UIComponents/ProductFollowSection";
 import ProductSocialSection from "../../Features/UIComponents/ProductSocialSection";
 import { useScrollStep } from "../../Core/Motion/useScrollStep";
@@ -40,13 +41,13 @@ const modules = [
 ];
 
 const widgets = [
-  ["calendarMedium", widgetCalendarMedium, "glimpsie-widget-card--wide"],
-  ["add", widgetAdd, "glimpsie-widget-card--compact"],
-  ["weekEntries", widgetWeekEntries, "glimpsie-widget-card--wide"],
-  ["fortune", widgetFortune, "glimpsie-widget-card--compact"],
-  ["calendarSmall", widgetCalendarSmall, "glimpsie-widget-card--third"],
-  ["streak", widgetStreak, "glimpsie-widget-card--third"],
-  ["weeklyStreak", widgetWeeklyStreak, "glimpsie-widget-card--third"],
+  ["calendarMedium", widgetCalendarMedium, "wide"],
+  ["add", widgetAdd, "compact"],
+  ["weekEntries", widgetWeekEntries, "wide"],
+  ["fortune", widgetFortune, "compact"],
+  ["calendarSmall", widgetCalendarSmall, "third"],
+  ["streak", widgetStreak, "third"],
+  ["weeklyStreak", widgetWeeklyStreak, "third"],
 ];
 
 export default function GlimpsiePage() {
@@ -128,23 +129,7 @@ export default function GlimpsiePage() {
           </div>
         </Reveal>
 
-        <Reveal as="section" className="glimpsie-widgets">
-          <header>
-            <div>
-              <span className="glimpsie-eyebrow">03 / {t("widgets.eyebrow")}</span>
-              <h2>{t("widgets.title")}</h2>
-            </div>
-            <p>{t("widgets.description")}</p>
-          </header>
-          <div className="glimpsie-widget-gallery">
-            {widgets.map(([key, image, className], index) => (
-              <figure className={`glimpsie-widget-card ${className}`} key={key}>
-                <img src={image} alt={t(`widgets.items.${key}`)} loading="lazy" />
-                <figcaption><span>0{index + 1}</span>{t(`widgets.items.${key}`)}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </Reveal>
+        <ProductWidgetGallery items={widgets} index="03" accent="#b5ade1" tone="#f0b4ae" t={t} />
 
         <ProductSocialSection
           variant="glimpsie"

@@ -5,6 +5,8 @@ import wordyImage from "../../Pages/Wordy/Assets/wordy_logo.png";
 import boardyImage from "../../Pages/Boardy/Assets/boardy_logo.png";
 import drinkaImage from "../../Pages/Drinka/Assets/drinka_logo.png";
 
+import appModels from "../../Models/apps";
+
 const SITE_URL = "https://www.firatguler.com";
 
 const apps = {
@@ -109,6 +111,9 @@ function getStructuredData(pathname, page) {
     };
 
     if (page.appStore) data.installUrl = page.appStore;
+
+    const sameAs = (appModels.find((app) => app.id === pathname.slice(1))?.social ?? []).map((link) => link.url);
+    if (sameAs.length) data.sameAs = sameAs;
     return data;
   }
 

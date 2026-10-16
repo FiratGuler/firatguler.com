@@ -104,6 +104,21 @@
       }
     }
   },
+  "widgets": {
+    "eyebrow": "On your Home Screen",
+    "title": "Every tasting, one glance away.",
+    "description": "Start a quick add, revisit your last tasting or check your top rated drinks without opening the app.",
+    "items": {
+      "quickAddMedium": "Quick Add",
+      "quickAdd": "Quick Add Small",
+      "tryList": "Try List",
+      "topRated": "Top Rated",
+      "memory": "Recent Tasting",
+      "week": "This Week",
+      "lastTasting": "Last Tasting",
+      "stats": "Tasting Summary"
+    }
+  },
   "platform": {
     "eyebrow": "Built for everyday use",
     "title": "Your archive, available when the night begins.",
