@@ -17,6 +17,7 @@ import {
 } from "react-icons/md";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
+import ProductFollowSection from "../../Features/UIComponents/ProductFollowSection";
 import ProductSocialSection from "../../Features/UIComponents/ProductSocialSection";
 import { useScrollStep } from "../../Core/Motion/useScrollStep";
 import { Reveal } from "../../Core/Motion/Reveal";
@@ -150,6 +151,8 @@ export default function GlimpsiePage() {
           url="https://www.firatguler.com/glimpsie"
           t={t}
         />
+
+        <ProductFollowSection appId="glimpsie" t={t} />
 
         <section className="glimpsie-cta">
           <span className="glimpsie-eyebrow">{t("cta.eyebrow")}</span>

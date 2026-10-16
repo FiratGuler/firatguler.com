@@ -8,6 +8,7 @@ import BoardyLogoText from "./Components/BoardyLogoText";
 import BoardyBodyContent from "./Components/BoardyBodyContent";
 import BoardyFeatures from "./Components/BoardyFeatures";
 
+import ProductFollowSection from "../../Features/UIComponents/ProductFollowSection";
 import en from "../../Locale/i18n/en/boardy.json";
 import tr from "../../Locale/i18n/tr/boardy.json";
 
@@ -49,6 +50,8 @@ export default function BoardyPage() {
 
         {/* Özellikler Kartları */}
         <BoardyFeatures t={t} />
+
+        <ProductFollowSection appId="boardy" t={t} />
         
       </main>
 

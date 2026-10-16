@@ -5,7 +5,7 @@ import WordyBodyContent from "./Components/WordyBodyContent";
 import WordyFeatures from "./Components/WordyFeatures";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
-import SocialSection from "./Components/WordySocial";
+import ProductFollowSection from "../../Features/UIComponents/ProductFollowSection";
 import en from "../../Locale/i18n/en/wordy.json";
 import tr from "../../Locale/i18n/tr/wordy.json";
 
@@ -50,7 +50,7 @@ export default function WordyPage() {
 
         {/* Sosyal Medya Bölümü - Buraya eklendi */}
         <div className="pt-12">
-          <SocialSection t={t} />
+          <ProductFollowSection appId="wordy" theme="light" t={t} />
         </div>
       </main>
 

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import { MdMusicNote, MdOutlineTimer, MdShield, MdTune } from "react-icons/md";
+import ProductFollowSection from "../../Features/UIComponents/ProductFollowSection";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
 import { useScrollStep } from "../../Core/Motion/useScrollStep";
@@ -86,6 +87,8 @@ export default function MacletPage() {
             {Object.keys(locales.en.native.points).map((key) => <li key={key}><MdShield aria-hidden="true" /><span>{t(`native.points.${key}`)}</span></li>)}
           </ul>
         </section>
+
+        <ProductFollowSection appId="maclet" t={t} />
 
         <section className="maclet-cta">
           <span className="maclet-eyebrow">{t("cta.eyebrow")}</span>

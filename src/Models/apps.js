@@ -36,6 +36,11 @@ const apps = [
     image: wordyImage,
     accent: "#f88222",
     appStoreLink: "https://apps.apple.com/tr/app/wordy-flashcard/id6741209566",
+    social: [
+      { platform: "instagram", handle: "@wordy.flashcard", url: "https://www.instagram.com/wordy.flashcard/" },
+      { platform: "tiktok", handle: "@wordy.flashcard", url: "https://www.tiktok.com/@wordy.flashcard" },
+      { platform: "x", handle: "@WordyFlashcard", url: "https://x.com/WordyFlashcard" },
+    ],
     detailLink: "/wordy",
     tags: ["Swift", " UIKit", "Firebase", "Superwall", "Mvvm-c"]
   },

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "../../Features/UIComponents/LanguageSwitcher";
 import DeveloperBackButton from "../../Features/UIComponents/DeveloperBackButton";
+import ProductFollowSection from "../../Features/UIComponents/ProductFollowSection";
 import ProductSocialSection from "../../Features/UIComponents/ProductSocialSection";
 import DrinkaHero, { DrinkaStage } from "./Components/DrinkaHero";
 import DrinkaExperience from "./Components/DrinkaExperience";
@@ -71,6 +72,8 @@ export default function DrinkaPage() {
           url="https://www.firatguler.com/drinka"
           t={t}
         />
+
+        <ProductFollowSection appId="drinka" t={t} />
 
         <section className="drinka-cta">
           <div className="drinka-cta__orb" aria-hidden="true" />
