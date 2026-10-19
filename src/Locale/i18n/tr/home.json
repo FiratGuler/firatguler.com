@@ -27,8 +27,8 @@
     "getButton": "App Store",
     "detailButton": "Detay",
     "apps": {
-      "maclet": {
-        "title": "Maclet",
+      "barlet": {
+        "title": "Barlet",
         "subtitle": "Temel Mac kontrollerin tek tık uzağında",
         "desc": "Müziği ve uygulama seslerini kontrol et; günlük görevlerini, timer'ı ve clipboard geçmişini doğrudan macOS menü barından yönet."
       },

@@ -1,5 +1,5 @@
 import { useLayoutEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import HomePage from "../Pages/Home/HomePage";
 import WordyPage from "../Pages/Wordy/WordyPage.jsx";
 import BoardyPage from "../Pages/Boardy/BoardyPage.jsx";
@@ -35,11 +35,13 @@ function App() {
         <Route path="/boardy" element={<BoardyPage />} />
         <Route path="/drinka" element={<DrinkaPage />} />
         <Route path="/glimpsie" element={<GlimpsiePage />} />
-        <Route path="/maclet" element={<MacletPage />} />
+        <Route path="/maclet" element={<Navigate to="/barlet" replace />} />
+        <Route path="/MacletPrivacyPolicy" element={<Navigate to="/BarletPrivacyPolicy" replace />} />
+        <Route path="/barlet" element={<MacletPage />} />
         <Route path="/WordyPrivacyPolicy" element={<WordyPrivacyPolicy />} />
         <Route path="/BoardyPrivacyPolicy" element={<BoardyPrivacyPolicy />} />
         <Route path="/DrinkaPrivacyPolicy" element={<DrinkaPrivacyPolicy />} />
-        <Route path="/MacletPrivacyPolicy" element={<MacletPrivacyPolicy />} />
+        <Route path="/BarletPrivacyPolicy" element={<MacletPrivacyPolicy />} />
         <Route path="/GlimpsiePrivacyPolicy" element={<GlimpsiePrivacyPolicy />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

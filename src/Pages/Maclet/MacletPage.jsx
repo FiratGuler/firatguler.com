@@ -28,7 +28,7 @@ export default function MacletPage() {
 
       <header className="maclet-nav">
         <DeveloperBackButton bgColor="#e8edf5" textColor="#111722" />
-        <span>MACLET · macOS</span>
+        <span>BARLET · macOS</span>
         <LanguageSwitcher lang={lang} setLang={setLang} bgColor="#202938" textColor="#f6f8fb" />
       </header>
 
@@ -37,7 +37,7 @@ export default function MacletPage() {
           <div className="product-story__flow">
         <section className="maclet-hero maclet-hero--copy">
           <div className="maclet-hero__copy">
-            <div className="maclet-brand"><img src={macletLogo} alt="" style={{ viewTransitionName: "app-icon-maclet" }} /><span>Maclet<small>{t("brand.tagline")}</small></span></div>
+            <div className="maclet-brand"><img src={macletLogo} alt="" style={{ viewTransitionName: "app-icon-maclet" }} /><span>Barlet<small>{t("brand.tagline")}</small></span></div>
             <span className="maclet-eyebrow">{t("hero.eyebrow")}</span>
             <h1>{t("hero.title")} <em>{t("hero.highlight")}</em></h1>
             <p>{t("hero.description")}</p>
@@ -60,11 +60,11 @@ export default function MacletPage() {
           <aside className="product-story__stage">
           <div className="maclet-demo" aria-label={t("hero.previewLabel")}>
             <div className="maclet-demo__menubar">
-              <span className="maclet-demo__app"><img src={macletLogo} alt="" />Maclet</span><i />
+              <span className="maclet-demo__app"><img src={macletLogo} alt="" />Barlet</span><i />
               <span><MdMusicNote /> Focus</span><span><MdOutlineTimer /> 24:18</span>
             </div>
             <div className="maclet-panel">
-              <div className="maclet-panel__title"><span>{React.createElement(featureIcons[activeKey])}</span><div><strong>{t(`features.items.${activeKey}.title`)}</strong><small>MACLET</small></div><MdTune /></div>
+              <div className="maclet-panel__title"><span>{React.createElement(featureIcons[activeKey])}</span><div><strong>{t(`features.items.${activeKey}.title`)}</strong><small>BARLET</small></div><MdTune /></div>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeKey}
@@ -88,7 +88,7 @@ export default function MacletPage() {
           </ul>
         </section>
 
-        <ProductFollowSection appId="maclet" t={t} />
+        <ProductFollowSection appId="barlet" t={t} />
 
         <section className="maclet-cta">
           <span className="maclet-eyebrow">{t("cta.eyebrow")}</span>
@@ -98,7 +98,7 @@ export default function MacletPage() {
         </section>
       </main>
 
-      <footer className="maclet-footer"><p>© 2026 Maclet · {t("footer.credit")} Fırat Güler</p><button type="button" onClick={() => navigate("/MacletPrivacyPolicy")}>{t("footer.privacy")}</button><span>SWIFT · SWIFTUI · APPKIT · CORE AUDIO</span></footer>
+      <footer className="maclet-footer"><p>© 2026 Barlet · {t("footer.credit")} Fırat Güler</p><button type="button" onClick={() => navigate("/BarletPrivacyPolicy")}>{t("footer.privacy")}</button><span>SWIFT · SWIFTUI · APPKIT · CORE AUDIO</span></footer>
     </div>
   );
 }

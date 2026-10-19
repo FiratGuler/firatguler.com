@@ -6,9 +6,9 @@
     "eyebrow": "A native macOS menu bar utility",
     "title": "Small tools.",
     "highlight": "Right where you need them.",
-    "description": "Maclet brings music, application audio, daily tasks, timers and clipboard history into one lightweight place — without pulling you out of your work.",
+    "description": "Barlet brings music, application audio, daily tasks, timers and clipboard history into one lightweight place — without pulling you out of your work.",
     "status": "In development for macOS",
-    "previewLabel": "Maclet menu bar utility preview",
+    "previewLabel": "Barlet menu bar utility preview",
     "nowPlaying": "Now Playing",
     "track": "Your focus soundtrack",
     "artist": "Playing from Music",
@@ -58,7 +58,7 @@
   "native": {
     "eyebrow": "Native by design",
     "title": "Private, local and unmistakably Mac.",
-    "description": "Maclet uses native Apple frameworks and stores utility data locally. There is no account, remote backend or third-party package in the current implementation.",
+    "description": "Barlet uses native Apple frameworks and stores utility data locally. There is no account, remote backend or third-party package in the current implementation.",
     "points": {
       "local": "Clipboard, task and timer data stays on the Mac",
       "native": "SwiftUI, AppKit, Core Audio and system materials",
@@ -71,7 +71,7 @@
   "cta": {
     "eyebrow": "Still taking shape",
     "title": "Less window switching. More flow.",
-    "description": "Maclet is currently in active development while its utilities and release path are being refined."
+    "description": "Barlet is currently in active development while its utilities and release path are being refined."
   },
   "footer": {
     "credit": "Designed & built by",

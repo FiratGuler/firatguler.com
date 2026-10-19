@@ -134,7 +134,7 @@ export default function AppCard({
       {platform === "macOS" && (
         <div className="app-card__desktop-preview" aria-hidden="true">
           <div className="app-card__desktop-bar">
-            <span><FaApple /> Maclet</span>
+            <span><FaApple /> Barlet</span>
             <i />
             <span>⌘ M</span>
           </div>

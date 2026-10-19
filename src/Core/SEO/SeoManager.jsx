@@ -10,8 +10,8 @@ import appModels from "../../Models/apps";
 const SITE_URL = "https://www.firatguler.com";
 
 const apps = {
-  "/maclet": {
-    title: "Maclet — Native macOS Menu Bar Utility | Fırat Güler",
+  "/barlet": {
+    title: "Barlet — Native macOS Menu Bar Utility | Fırat Güler",
     description: "Control music and app audio, manage daily tasks, run a timer and search clipboard history from the macOS menu bar.",
     image: profileImage,
     favicon: "/favicon.ico",
@@ -55,7 +55,7 @@ const privacyRoutes = {
   "/WordyPrivacyPolicy": "Wordy Privacy Policy",
   "/BoardyPrivacyPolicy": "Boardy Privacy Policy",
   "/DrinkaPrivacyPolicy": "Drinka Privacy Policy",
-  "/MacletPrivacyPolicy": "Maclet Privacy Policy",
+  "/BarletPrivacyPolicy": "Barlet Privacy Policy",
   "/GlimpsiePrivacyPolicy": "Glimpsie Privacy Policy",
 };
 

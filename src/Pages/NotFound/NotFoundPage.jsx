@@ -4,7 +4,7 @@ import { MdArrowBack, MdNorthEast } from "react-icons/md";
 import "./not-found.css";
 
 const productLinks = [
-  ["Maclet", "/maclet"],
+  ["Barlet", "/barlet"],
   ["Drinka", "/drinka"],
   ["Glimpsie", "/glimpsie"],
   ["Wordy", "/wordy"],

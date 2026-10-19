@@ -27,8 +27,8 @@
     "getButton": "App Store",
     "detailButton": "Detail",
     "apps": {
-      "maclet": {
-        "title": "Maclet",
+      "barlet": {
+        "title": "Barlet",
         "subtitle": "Your essential Mac controls, one click away",
         "desc": "Control music and app audio, manage daily tasks, run a timer and search clipboard history — directly from the macOS menu bar."
       },

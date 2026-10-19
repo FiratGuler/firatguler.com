@@ -8,11 +8,11 @@ import macletImage from "../Pages/Maclet/Assets/maclet_logo.png";
 const apps = [
   /*
   {
-    id: "maclet",
+    id: "barlet",
     image: macletImage,
     platform: "macOS",
     accent: "#6b5cff",
-    detailLink: "/maclet",
+    detailLink: "/barlet",
     tags: ["Swift", "SwiftUI", "AppKit", "Core Audio", "macOS"]
   },
   */
@@ -20,6 +20,11 @@ const apps = [
     id: "glimpsie",
     image: glimpsieImage,
     accent: "#b5ade1",
+    social: [
+      { platform: "instagram", handle: "@glimpsie.app", url: "https://www.instagram.com/glimpsie.app/" },
+      { platform: "tiktok", handle: "@glimpsie.app", url: "https://www.tiktok.com/@glimpsie.app" },
+      { platform: "x", handle: "@GlimpsieApp", url: "https://x.com/GlimpsieApp" },
+    ],
     detailLink: "/glimpsie",
     tags: ["Swift", "SwiftUI", "Firebase", "WidgetKit", "RevenueCat"]
   },
@@ -28,6 +33,11 @@ const apps = [
     image: drinkaImage,
     accent: "#9f2437",
     appStoreLink: "https://apps.apple.com/tr/app/drinka-her-geceyi-hat%C4%B1rla/id6760046885?l=tr",
+    social: [
+      { platform: "instagram", handle: "@drinka.app", url: "https://www.instagram.com/drinka.app/" },
+      { platform: "tiktok", handle: "@drinka.app", url: "https://www.tiktok.com/@drinka.app" },
+      { platform: "x", handle: "@DrinkaApp", url: "https://x.com/DrinkaApp" },
+    ],
     detailLink: "/drinka",
     tags: ["Swift", "SwiftUI", "Firebase", "MapKit", "MVVM"]
   },
