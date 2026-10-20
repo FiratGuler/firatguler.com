@@ -2423,7 +2423,7 @@
 }
 
 /* Product identity assets shared by the Home and product detail surfaces. */
-.maclet-brand > img {
+.barlet-brand > img {
   width: 58px;
   height: 58px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -2432,7 +2432,7 @@
   object-fit: cover;
 }
 
-.maclet-demo__app img {
+.barlet-demo__app img {
   width: 17px;
   height: 17px;
   border-radius: 5px;

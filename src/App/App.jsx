@@ -8,9 +8,9 @@ import BoardyPrivacyPolicy from "../Pages/Boardy/BoardyPrivacyPolicy";
 import DrinkaPage from "../Pages/Drinka/DrinkaPage.jsx";
 import DrinkaPrivacyPolicy from "../Pages/Drinka/DrinkaPrivacyPolicy";
 import GlimpsiePage from "../Pages/Glimpsie/GlimpsiePage";
-import MacletPrivacyPolicy from "../Pages/Maclet/MacletPrivacyPolicy";
+import BarletPrivacyPolicy from "../Pages/Barlet/BarletPrivacyPolicy";
 import GlimpsiePrivacyPolicy from "../Pages/Glimpsie/GlimpsiePrivacyPolicy";
-import MacletPage from "../Pages/Maclet/MacletPage";
+import BarletPage from "../Pages/Barlet/BarletPage";
 import NotFoundPage from "../Pages/NotFound/NotFoundPage";
 import SeoManager from "../Core/SEO/SeoManager";
 
@@ -37,11 +37,11 @@ function App() {
         <Route path="/glimpsie" element={<GlimpsiePage />} />
         <Route path="/maclet" element={<Navigate to="/barlet" replace />} />
         <Route path="/MacletPrivacyPolicy" element={<Navigate to="/BarletPrivacyPolicy" replace />} />
-        <Route path="/barlet" element={<MacletPage />} />
+        <Route path="/barlet" element={<BarletPage />} />
         <Route path="/WordyPrivacyPolicy" element={<WordyPrivacyPolicy />} />
         <Route path="/BoardyPrivacyPolicy" element={<BoardyPrivacyPolicy />} />
         <Route path="/DrinkaPrivacyPolicy" element={<DrinkaPrivacyPolicy />} />
-        <Route path="/BarletPrivacyPolicy" element={<MacletPrivacyPolicy />} />
+        <Route path="/BarletPrivacyPolicy" element={<BarletPrivacyPolicy />} />
         <Route path="/GlimpsiePrivacyPolicy" element={<GlimpsiePrivacyPolicy />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

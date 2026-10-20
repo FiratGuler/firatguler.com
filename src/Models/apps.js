@@ -3,13 +3,13 @@ import wordyImage from "../Pages/Wordy/Assets/wordy_logo.png";
 import boardyImage from "../Pages/Boardy/Assets/boardy_logo.png";
 import drinkaImage from "../Pages/Drinka/Assets/drinka_logo.png";
 import glimpsieImage from "../Pages/Glimpsie/Assets/glimpsie_logo.png";
-import macletImage from "../Pages/Maclet/Assets/maclet_logo.png";
+import barletImage from "../Pages/Barlet/Assets/barlet_logo.png";
 
 const apps = [
   /*
   {
     id: "barlet",
-    image: macletImage,
+    image: barletImage,
     platform: "macOS",
     accent: "#6b5cff",
     detailLink: "/barlet",
