@@ -13,6 +13,7 @@ import GlimpsiePrivacyPolicy from "../Pages/Glimpsie/GlimpsiePrivacyPolicy";
 import BarletPage from "../Pages/Barlet/BarletPage";
 import NotFoundPage from "../Pages/NotFound/NotFoundPage";
 import SeoManager from "../Core/SEO/SeoManager";
+import SplashScreen from "../Core/Motion/SplashScreen";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
+      <SplashScreen />
       <ScrollToTop />
       <SeoManager />
       <Routes>

@@ -2438,3 +2438,30 @@
   border-radius: 5px;
   object-fit: cover;
 }
+
+/* Splash screen logo animation */
+.splash-logo-svg {
+  width: min(60vmin, 420px);
+  height: auto;
+  overflow: visible;
+}
+.splash-logo {
+  fill: var(--home-accent);
+  fill-opacity: 0;
+  stroke: var(--home-accent);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transform-origin: 512px 510px;
+  animation:
+    splash-draw 1.8s cubic-bezier(.65, 0, .35, 1) forwards,
+    splash-fill .7s ease-out 1.5s forwards,
+    splash-pop .9s cubic-bezier(.34, 1.56, .64, 1) 1.6s forwards;
+}
+@keyframes splash-draw { to { stroke-dashoffset: 0; } }
+@keyframes splash-fill { to { fill-opacity: 1; stroke-width: 0; } }
+@keyframes splash-pop { 0% { transform: scale(1); } 50% { transform: scale(1.06); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .splash-logo { animation: none; stroke-dashoffset: 0; fill-opacity: 1; stroke-width: 0; }
+}
