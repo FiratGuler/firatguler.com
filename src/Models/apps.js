@@ -12,6 +12,7 @@ const apps = [
     image: barletImage,
     platform: "macOS",
     accent: "#6b5cff",
+    appStoreLink: "https://apps.apple.com/tr/app/barlet-menu-bar-toolkit/id6817447635?l=tr&mt=12",
     detailLink: "/barlet",
     tags: ["Swift", "SwiftUI", "AppKit", "Core Audio", "macOS"]
   },
@@ -20,6 +21,7 @@ const apps = [
     id: "glimpsie",
     image: glimpsieImage,
     accent: "#b5ade1",
+    appStoreLink: "https://apps.apple.com/tr/app/glimpsie-daily-quick-journal/id6814215632?l=tr",
     social: [
       { platform: "instagram", handle: "@glimpsie.app", url: "https://www.instagram.com/glimpsie.app/" },
       { platform: "tiktok", handle: "@glimpsie.app", url: "https://www.tiktok.com/@glimpsie.app" },

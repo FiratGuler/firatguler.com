@@ -130,12 +130,14 @@ export default function GlimpsiePage() {
         </Reveal>
 
         <ProductWidgetGallery items={widgets} index="03" accent="#b5ade1" tone="#f0b4ae" t={t} />
-
-        <ProductSocialSection
+{/*  
+<ProductSocialSection
           variant="glimpsie"
           url="https://www.firatguler.com/glimpsie"
           t={t}
         />
+ */}
+        
 
         <ProductFollowSection appId="glimpsie" t={t} />
 

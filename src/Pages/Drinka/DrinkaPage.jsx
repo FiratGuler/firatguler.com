@@ -88,13 +88,13 @@ export default function DrinkaPage() {
         <DrinkaCapabilities t={t} />
         </Reveal>
         <ProductWidgetGallery items={widgets} accent="#d3b5bc" tone="#b78390" caption="below" surface="rgba(21, 21, 23, 0.8)" t={t} />
-
+ {/*
         <ProductSocialSection
           variant="drinka"
           url="https://www.firatguler.com/drinka"
           t={t}
         />
-
+ */}
         <ProductFollowSection appId="drinka" t={t} />
 
         <section className="drinka-cta">
