@@ -6,7 +6,7 @@ import glimpsieImage from "../Pages/Glimpsie/Assets/glimpsie_logo.png";
 import barletImage from "../Pages/Barlet/Assets/barlet_logo.png";
 
 const apps = [
-  /*
+
   {
     id: "barlet",
     image: barletImage,
@@ -15,7 +15,7 @@ const apps = [
     detailLink: "/barlet",
     tags: ["Swift", "SwiftUI", "AppKit", "Core Audio", "macOS"]
   },
-  */
+
   {
     id: "glimpsie",
     image: glimpsieImage,
